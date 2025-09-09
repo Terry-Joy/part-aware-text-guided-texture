@@ -1,0 +1,74 @@
+# 模型路径配置
+normal_controlnet_path: "lllyasviel/control_v11p_sd15_normalbae"
+depth_controlnet_path: "lllyasviel/control_v11f1p_sd15_depth"
+segment_controlnet_path: "/mnt/lab/data/zhangtianle/train_controlnet/PartObjaverse-Tiny_mesh_checkpoint/20250627_175533/checkpoint-17000/controlnet"
+# stable_diffusion_path: "/mnt/lab/data/zhangtianle/dreamshaper-8"
+stable_diffusion_path: "/home/zhangtianle/.cache/huggingface/hub/models--runwayml--stable-diffusion-v1-5/snapshots/f03de327dd89b501a01da37fc5240cf4fdba85a1"
+
+# 网格设置
+
+
+# mesh: "./eval/eval_data_obj/b77fcf18510f410c915456193111a8db_segment.obj"
+# mesh: "./data/face/face.obj"
+mesh: "./eval/eval_data_obj/b77fcf18510f410c915456193111a8db.obj"
+mesh_config_relative: true
+use_mesh_name: false
+mesh_scale: 2.0
+keep_mesh_uv: false
+
+# 输出设置
+output: "./results/"
+prefix: "MVD"
+timeformat: "%d%b%Y-%H%M%S"
+# img_path: "/mnt/lab/data/zhangtianle/controlnet_eval/controlnet_eval_renders/ed24b6e27921449f935509d9f3da043f"
+img_path: "/mnt/lab/data/zhangtianle/controlnet_eval/eval_glb_renders/b77fcf18510f410c915456193111a8db"
+# img_path: "/mnt/lab/data/zhangtianle/segment_data/b77fcf18510f410c915456193111a8db"
+
+# 扩散设置
+# prompt: "A highly detailed 3D model of a character in elaborate armor with gold, green, and red accents, featuring a spiked helmet, intricate chestplate, large shoulder pads, bulky arm guards, complex leg armor, wide decorated belt, armored boots, and platinum-blonde hair."
+# prompt: "Brown briefcase with silver accents and pockets."
+prompt: "Binoculars with a greenish-teal body, grey cylindrical objective and eyepiece lenses, brown ear protectors attached to eyepieces, yellow cylindrical upper components, brownish-grey flexible strap/handle, and a dark grey adjustment mechanism."
+# prompt: "Portrait photo of Kratos, god of war."
+steps: 30
+guidance_scale: 15.5
+seed: 1
+
+# ControlNet设置
+cond_type: "depth"
+guess_mode: false
+# conditioning_scale: 0.7
+# conditioning_scale_end: 0.9
+conditioning_scale: 0.7
+conditioning_scale_end: 0.9
+control_guidance_start: 0.0
+control_guidance_end: 0.99
+guidance_rescale: 0.0
+
+# 视图设置
+camera_azims: [0,  90, 180, 270]
+# camera_azims: [0, 45, 90, 180, 270, 315]
+# camera_azims: [-180, -135, -90, -45, 0, 45, 90, 135]
+no_top_cameras: false
+latent_view_size: 96 # *8是condtion的输出图像
+latent_tex_size: 512
+rgb_view_size: 1024
+rgb_tex_size: 1024
+
+# 多视图扩散设置
+mvd_end: 0.8
+mvd_exp_start: 0.0
+mvd_exp_end: 6.0
+ref_attention_end: 0.2
+shuffle_bg_change: 0.4
+shuffle_bg_end: 0.8
+
+# 日志设置
+log_interval: 10
+tex_fast_preview: true
+view_fast_preview: true
+
+# 三个attention机制的消融开关
+use_adjacent_baseline: false
+use_adjacent_segment: true
+use_ref: true
+segment_img_path: "/home/zhangtianle/text-to-texture/SyncMVD/b77fcf18510f410c915456193111a8db_segment_big_mask_768.png"

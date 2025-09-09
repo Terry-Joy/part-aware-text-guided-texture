@@ -1,0 +1,10 @@
+*/__pycache__/
+*.pyc
+/assets/*.py
+/assets/*.mp4
+/data
+/result
+/assets
+/comparison_results
+/config
+/source_images
