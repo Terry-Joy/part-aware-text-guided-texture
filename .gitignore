@@ -3,7 +3,7 @@
 /assets/*.py
 /assets/*.mp4
 /data
-/result
+/results
 /assets
 /comparison_results
 /config

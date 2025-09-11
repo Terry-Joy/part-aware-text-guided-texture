@@ -50,7 +50,7 @@ from .utils import *
 
 # get_device
 if torch.cuda.is_available():
-    device = torch.device("cuda:0")
+    device = torch.device("cuda:2")
     torch.cuda.set_device(device)
 else:
     device = torch.device("cpu")
@@ -243,8 +243,8 @@ def load_segment_mask(mask_path, input_resolution, num_views=4, device="cpu"):
             ])
             mask_resized = transform(arr).flatten(
                 1).long().to(device)  # (1, seq_len)
-            print('name, mask_i.size', name,
-                  mask_resized.shape, mask_resized.device)
+            # print('name, mask_i.size', name,
+            #       mask_resized.shape, mask_resized.device)
             layer_tokens.append(mask_resized)
 
         mask_tokens_per_layer[(h, w)] = torch.cat(
@@ -342,15 +342,15 @@ class StableSyncMVDPipeline(StableDiffusionControlNetPipeline):
         # self.device = torch.device("cuda:1") if torch.cuda.is_available() else torch.device("cpu")
         self.scheduler = DDPMScheduler.from_config(self.scheduler.config)
         self.model_cpu_offload_seq = "vae->text_encoder->unet->vae"
-        self.enable_model_cpu_offload()
+        self.enable_model_cpu_offload(gpu_id=2)
         self.enable_vae_slicing()
         self.image_processor = VaeImageProcessor(
             vae_scale_factor=self.vae_scale_factor)
 
-    # @property
-    # def _execution_device(self):
-    # 	"""返回当前执行设备（强制使用 cuda:1）"""
-    # 	return torch.device("cuda:1") if torch.cuda.is_available() else torch.device("cpu")
+    @property
+    def _execution_device(self):
+    	"""返回当前执行设备（强制使用 cuda:1）"""
+    	return torch.device("cuda:2") if torch.cuda.is_available() else torch.device("cpu")
 
     def initialize_pipeline(
             self,

@@ -40,15 +40,18 @@ def replace_attention_processors(
             scale = 2 ** b                    # 1,2,4,8
             # print('b, is, ', b, base, base // scale)
             # print('down_blocks k is: ', k)
+            # print('down block name is: ', k, base // scale, base // scale)
             return base // scale, base // scale
         elif "mid_block" in k:
             # 最低分辨率
             # print('mid_block k is: ', k)
+            # print('mid block name is: ', k, base // (2 ** (n_down - 1)), base // (2 ** (n_down - 1)))
             return base // (2 ** (n_down - 1)), base // (2 ** (n_down - 1))
         elif "up_blocks" in k:
             b = int(k.split(".")[1])          # 0,1,2,3
             # print('b is: ',b)
             scale = 2 ** (n_down - b - 1)                    # 和 down 一样
+            # print('up block name is: ', k, base // scale, base // scale)
             # print('up_blocks k is: ', k, scale, base, base // scale)
             return base // scale, base // scale
         else:
@@ -57,7 +60,7 @@ def replace_attention_processors(
     for k, v in attn_processors.items():
         if "attn1" not in k:
             continue
-
+        # print('k is: ', k)
         hw = hw_from_key(k)
         if hw is None:
             continue
@@ -74,6 +77,7 @@ def replace_attention_processors(
             #     seg_tokens = segment_mask_tokens[nearest]
 
         attn_processors[k] = processor(
+            # name=k,
             custom_attention_mask=attention_mask,
             ref_attention_mask=ref_attention_mask,
             ref_weight=ref_weight,
@@ -95,6 +99,7 @@ class SamplewiseAttnProcessor2_0:
 
     def __init__(
         self,
+        # name="",
         custom_attention_mask=None,         # 相邻视角 mask
         ref_attention_mask=None,            # 全局参考视角 mask
         use_adjacent_baseline=True,         # 消融开关1: 原始相邻视角 attention
@@ -108,6 +113,7 @@ class SamplewiseAttnProcessor2_0:
             raise ImportError(
                 "AttnProcessor2_0 requires PyTorch 2.0, to use it, please upgrade PyTorch to 2.0."
             )
+        # self.name = name
         self.ref_weight = ref_weight
         self.custom_attention_mask = custom_attention_mask
         self.ref_attention_mask = ref_attention_mask
@@ -125,7 +131,7 @@ class SamplewiseAttnProcessor2_0:
         attention_mask=None,
         temb=None,
     ):
-
+        # print(f"[Forward] {self.name} | hidden={hidden_states.shape}")
         residual = hidden_states
 
         if attn.spatial_norm is not None:
@@ -310,3 +316,20 @@ class SamplewiseAttnProcessor2_0:
         hidden_states = hidden_states / attn.rescale_output_factor
 
         return hidden_states
+
+# [Forward] down_blocks.0.attentions.0.transformer_blocks.0.attn1.processor | hidden=torch.Size([6, 9216, 320])
+# [Forward] down_blocks.0.attentions.1.transformer_blocks.0.attn1.processor | hidden=torch.Size([6, 9216, 320])
+# [Forward] down_blocks.1.attentions.0.transformer_blocks.0.attn1.processor | hidden=torch.Size([6, 2304, 640])
+# [Forward] down_blocks.1.attentions.1.transformer_blocks.0.attn1.processor | hidden=torch.Size([6, 2304, 640])
+# [Forward] down_blocks.2.attentions.0.transformer_blocks.0.attn1.processor | hidden=torch.Size([6, 576, 1280])
+# [Forward] down_blocks.2.attentions.1.transformer_blocks.0.attn1.processor | hidden=torch.Size([6, 576, 1280])
+# [Forward] mid_block.attentions.0.transformer_blocks.0.attn1.processor | hidden=torch.Size([6, 144, 1280])
+# [Forward] up_blocks.1.attentions.0.transformer_blocks.0.attn1.processor | hidden=torch.Size([6, 576, 1280])
+# [Forward] up_blocks.1.attentions.1.transformer_blocks.0.attn1.processor | hidden=torch.Size([6, 576, 1280])
+# [Forward] up_blocks.1.attentions.2.transformer_blocks.0.attn1.processor | hidden=torch.Size([6, 576, 1280])
+# [Forward] up_blocks.2.attentions.0.transformer_blocks.0.attn1.processor | hidden=torch.Size([6, 2304, 640])
+# [Forward] up_blocks.2.attentions.1.transformer_blocks.0.attn1.processor | hidden=torch.Size([6, 2304, 640])
+# [Forward] up_blocks.2.attentions.2.transformer_blocks.0.attn1.processor | hidden=torch.Size([6, 2304, 640])
+# [Forward] up_blocks.3.attentions.0.transformer_blocks.0.attn1.processor | hidden=torch.Size([6, 9216, 320])
+# [Forward] up_blocks.3.attentions.1.transformer_blocks.0.attn1.processor | hidden=torch.Size([6, 9216, 320])
+# [Forward] up_blocks.3.attentions.2.transformer_blocks.0.attn1.processor | hidden=torch.Size([6, 9216, 320])

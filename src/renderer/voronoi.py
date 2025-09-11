@@ -134,7 +134,7 @@ voronoiKernel = cp.RawKernel(r"""
                     long long y3 = ping[src] % yDim;
                     long long curr_dist = (x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2);
                     long long jump_dist = (x1 - x3) * (x1 - x3) + (y1 - y3) * (y1 - y3);
-                    if (jump_dist < curr_dist)
+                    if (jump_dist < curr_dist) 
                         pong[k] = ping[src];
                 }
             }
