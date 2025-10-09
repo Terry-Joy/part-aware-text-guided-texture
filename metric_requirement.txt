@@ -1,0 +1,20 @@
+# PyTorch 核心库，建议根据你的 CUDA 版本选择合适版本
+torch>=2.1.0
+torchvision>=0.16.0
+
+# TorchMetrics 用于 FID/KID 指标计算
+torchmetrics>=0.11.4
+
+# CLIP 模型依赖
+ftfy>=6.1.1
+regex>=2022.10.31
+
+# 图像处理和数组计算
+Pillow>=10.0
+numpy>=1.25
+
+# 显示进度条
+tqdm>=4.65
+
+# CLIP 模型安装（官方 GitHub）
+git+https://github.com/openai/CLIP.git

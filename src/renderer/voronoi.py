@@ -60,11 +60,18 @@ def voronoi_solve(texture, mask):
             texture - Propagated tensor
     '''
     h, w, c = texture.shape
+    # print('texture device is: ', texture.device)
     # hwc_texture = texture.permute(1,2,0)
     # os.environ['CUDA_VISIBLE_DEVICES'] = '3'
     valid_pix_coord = torch.where(mask>0)
     indices = torch.arange(0, h*w).cuda().reshape(h, w)
     idx_map = -1 * torch.ones((h,w), dtype=torch.int64).cuda()
+    # print("idx_map.device:", idx_map.device)
+    # print("indices.device:", indices.device)
+    # print("valid_pix_coord[0].device:", valid_pix_coord[0].device)
+    # print("valid_pix_coord[1].device:", valid_pix_coord[1].device)
+
+
     idx_map[valid_pix_coord] = indices[valid_pix_coord]
 
     ping = cp.asarray(idx_map)

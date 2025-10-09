@@ -40,7 +40,7 @@ def check_non_transparent_match(combined_mask_path, render_dir, H, W, output_dir
     
     results = []
     
-    for i in range(4):
+    for i in range(6):
         # 获取当前视图的mask
         mask_view = mask_views[i]
         

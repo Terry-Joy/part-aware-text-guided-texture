@@ -4,6 +4,66 @@ import math
 import random
 import torch
 from torchvision.transforms import Resize, InterpolationMode
+import open3d as o3d
+from copy import deepcopy
+from sklearn.neighbors import NearestNeighbors
+
+def construct_sparse_L(knn_indices, distance_score, m, n):
+    """
+    knn_indices: a list of arrays where each array contains the k-nearest neighbor indices for one unseen point.
+    m: number of unseen points.
+    n: total number of points.
+    """
+    row_indices = []
+    col_indices = []
+
+    for i, neighbors in enumerate(knn_indices):
+        row_indices.extend([i] * len(neighbors))  # Add the same row index for each neighbor
+        col_indices.extend(neighbors)  # Add the column indices of the neighbors
+
+    # Convert to PyTorch tensor
+    row_indices = torch.tensor(row_indices, dtype=torch.long)
+    col_indices = torch.tensor(col_indices, dtype=torch.long)
+    ones_data = torch.ones(len(row_indices))
+
+    # Construct the sparse tensor in COO format
+    L = torch.sparse_coo_tensor(
+        indices=torch.stack([row_indices, col_indices]),
+        values=distance_score.reshape(-1),
+        size=(m, n),
+        dtype=torch.float
+    )
+
+    return L
+
+def index_select(data: torch.Tensor, index: torch.LongTensor, dim: int) -> torch.Tensor:
+    r"""Advanced index select.
+
+    Returns a tensor `output` which indexes the `data` tensor along dimension `dim`
+    using the entries in `index` which is a `LongTensor`.
+
+    Different from `torch.index_select`, `index` does not has to be 1-D. The `dim`-th
+    dimension of `data` will be expanded to the number of dimensions in `index`.
+
+    For example, suppose the shape `data` is $(a_0, a_1, ..., a_{n-1})$, the shape of `index` is
+    $(b_0, b_1, ..., b_{m-1})$, and `dim` is $i$, then `output` is $(n+m-1)$-d tensor, whose shape is
+    $(a_0, ..., a_{i-1}, b_0, b_1, ..., b_{m-1}, a_{i+1}, ..., a_{n-1})$.
+
+    Args:
+        data (Tensor): (a_0, a_1, ..., a_{n-1})
+        index (LongTensor): (b_0, b_1, ..., b_{m-1})
+        dim: int
+
+    Returns:
+        output (Tensor): (a_0, ..., a_{dim-1}, b_0, ..., b_{m-1}, a_{dim+1}, ..., a_{n-1})
+    """
+    output = data.index_select(dim, index.reshape(-1))
+
+    if index.ndim > 1:
+        output_shape = data.shape[:dim] + index.shape + data.shape[dim:][1:]
+        output = output.view(*output_shape)
+
+    return output
 
 
 '''
@@ -53,6 +113,20 @@ def latent_preview(x):
 	image = image.numpy()
 	return image
 
+def get_normals(pcd: np.array):
+    pcd = n2o(pcd)
+    pcd.estimate_normals()
+    return np.asarray(pcd.normals)
+
+
+def n2o(__points, __colors=None) -> o3d.geometry.PointCloud:
+    pcd = o3d.geometry.PointCloud()
+    pcd.points = o3d.utility.Vector3dVector(__points[:, :3])
+    if __points.shape[1] == 6:
+        pcd.colors = o3d.utility.Vector3dVector(__points[:, 3:])
+    if __colors is not None:
+        pcd.colors = o3d.utility.Vector3dVector(__colors)
+    return pcd
 
 # Decode each view and bake them into a rgb texture
 def get_rgb_texture(vae, uvp_rgb, latents):

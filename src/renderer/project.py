@@ -127,8 +127,6 @@ class UVProjection():
     def uv_unwrap(self, mesh):
         verts_list = mesh.verts_list()[0]
         faces_list = mesh.faces_list()[0]
-        print('verts_list shape is', verts_list.shape)
-        print('faces_list shape is', faces_list.shape)
 
         import xatlas
         import numpy as np
@@ -271,7 +269,7 @@ class UVProjection():
         if not hasattr(self, "renderer"):
             self.setup_renderer(size=render_size)
         if not hasattr(self, "mesh_d"):
-            print('???')
+            # print('???')
             self.disconnect_faces()
         if not hasattr(self, "mesh_uv"):
             self.construct_uv_mesh() # (u, v, z)
@@ -570,6 +568,8 @@ class UVProjection():
             total_weights += weight
             baked += bake_map * weight
         baked /= total_weights + 1E-8
+        
+        #  暂时去掉
         baked = voronoi_solve(baked, total_weights[...,0])
 
         bake_tex = TexturesUV([baked], tmp_mesh.textures.faces_uvs_padded(), tmp_mesh.textures.verts_uvs_padded(), sampling_mode=self.sampling_mode)

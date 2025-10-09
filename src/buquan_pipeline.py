@@ -46,6 +46,7 @@ from .syncmvd.attention2 import SamplewiseAttnProcessor2_0, replace_attention_pr
 from .syncmvd.prompt import *
 from .syncmvd.step import step_tex
 from .utils import *
+from .segment_sptial_inpaint import SpatialAware3DInpainting
 
 
 # # get_device
@@ -1188,23 +1189,77 @@ class StableSyncMVDPipeline(StableDiffusionControlNetPipeline):
 
         self.uvp.to(self._execution_device)
         self.uvp_rgb.to(self._execution_device)
+        mesh = self.uvp_rgb.mesh
+
+        # print cos_maps statistics
+        for i, cos_map in enumerate(self.uvp_rgb.cos_maps):
+            print(f"[cos_maps] Camera {i}: shape={cos_map.shape}, min={cos_map.min().item():.6f}, max={cos_map.max().item():.6f}")
+
+
+        cos_maps_stack = torch.stack(self.uvp_rgb.cos_maps, dim=0)  # [N_views, H, W, C]
+        max_cos_map, _ = torch.max(cos_maps_stack, dim=0)            # [H, W, C]
+
+
+        # origin output, no inpaint
         result_tex_rgb, result_tex_rgb_output = get_rgb_texture(
             self.vae, self.uvp_rgb, latents)
         self.uvp.save_mesh(f"{self.result_dir}/textured.obj",
                            result_tex_rgb.permute(1, 2, 0))
 
+        # set origin texture
         self.uvp_rgb.set_texture_map(result_tex_rgb)
-        textured_views = self.uvp_rgb.render_textured_views()
-        textured_views_rgb = torch.cat(textured_views, axis=-1)[:-1, ...]
-        textured_views_rgb = textured_views_rgb.permute(
+        original_textured_views = self.uvp_rgb.render_textured_views()
+        original_textured_views_rgb = torch.cat(
+            original_textured_views, axis=-1)[:-1, ...]
+        original_textured_views_rgb = original_textured_views_rgb.permute(
             1, 2, 0).cpu().numpy()[None, ...]
-        v = numpy_to_pil(textured_views_rgb)[0]
-        print('diaomao, save textured views')
+        origin_v = numpy_to_pil(original_textured_views_rgb)[0]
+        origin_save_path = f"{self.result_dir}/original_textured_views_rgb.jpg"
+        origin_v.save(origin_save_path)
+        print('result_tex_rgb_first is: ', result_tex_rgb.shape)
+        # SpatialAware3DInpainting
+        s3i = SpatialAware3DInpainting(mesh, self._execution_device, max_cos_map)
+        result_tex_rgb, postion_map, red_vis_tex = s3i(result_tex_rgb)
+    
+        inpaint_dir = f"{self.result_dir}/after_inpainting"
+        # 如果目录不存在，就创建
+        os.makedirs(inpaint_dir, exist_ok=True)
 
-        save_path = f"{self.result_dir}/textured_views_rgb.jpg"
+        # === 🟥 红色可视化版本 ===
+        #  保存红色纹理为 mesh
+        print('result_tex_rgb is: ', result_tex_rgb.shape)
+        print('red_vis_tex is: ', red_vis_tex.shape)
+        self.uvp.save_mesh(f"{inpaint_dir}/textured_red.obj", red_vis_tex)
+
+        # 设置纹理为红色的
+        self.uvp_rgb.set_texture_map(red_vis_tex.permute(2, 0, 1))
+        red_textured_views = self.uvp_rgb.render_textured_views()
+        red_textured_views_rgb = torch.cat(red_textured_views, axis=-1)[:-1, ...]
+        red_textured_views_rgb = red_textured_views_rgb.permute(1, 2, 0).cpu().numpy()[None, ...]
+        red_v = numpy_to_pil(red_textured_views_rgb)[0]
+        red_v.save(f"{inpaint_dir}/inpaint_textured_views_red.jpg")
+
+        print("✅ 已保存红色可视化 mesh 与渲染图：",
+            f"{inpaint_dir}/textured_red.obj",
+            f"{inpaint_dir}/inpaint_textured_views_red.jpg")
+
+
+        # === 原始 inpaint 保存 ===
+        self.uvp.save_mesh(f"{self.result_dir}/after_inpainting/textured.obj", result_tex_rgb)
+
+        # print('result_tex_rgb_after is: ', result_tex_rgb.shape)
+        self.uvp_rgb.set_texture_map(result_tex_rgb.permute(2, 0, 1))
+        inpaint_textured_views = self.uvp_rgb.render_textured_views()
+        inpaint_textured_views_rgb = torch.cat(inpaint_textured_views, axis=-1)[:-1, ...]
+        inpaint_textured_views_rgb = inpaint_textured_views_rgb.permute(
+            1, 2, 0).cpu().numpy()[None, ...]
+        inpaint_v = numpy_to_pil(inpaint_textured_views_rgb)[0]
+        # print('diaomao, save textured views')
+
+        save_path = f"{self.result_dir}/after_inpainting/inpaint_textured_views_rgb.jpg"
         print("save to: ", save_path)
         os.makedirs(self.result_dir, exist_ok=True)
-        v.save(save_path)
+        inpaint_v.save(save_path)
         print("saved successfully?", os.path.exists(save_path))
         # display(v)
 
@@ -1215,4 +1270,4 @@ class StableSyncMVDPipeline(StableDiffusionControlNetPipeline):
         self.uvp.to("cpu")
         self.uvp_rgb.to("cpu")
 
-        return result_tex_rgb, textured_views, v
+        return result_tex_rgb, inpaint_textured_views, inpaint_v

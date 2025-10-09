@@ -6,7 +6,7 @@ import torch
 from diffusers import StableDiffusionControlNetPipeline, ControlNetModel
 from diffusers import DDPMScheduler
 # pipeline2 测试
-from src.pipeline2 import StableSyncMVDPipeline
+from src.multi_gen_mask_pipeline import StableSyncMVDPipeline
 import yaml
 import argparse
 import shutil
@@ -18,6 +18,79 @@ def parse_config(config_path):
         config = yaml.safe_load(f)
     return config
 
+def make_experiment_dir(opt, mesh_path):
+    from os.path import join, splitext, basename
+    import os
+    from datetime import datetime
+
+    mesh_name = splitext(basename(mesh_path))[0]
+
+    # 构建早晚期模块列表
+    early_modules = []
+    if opt.get('early_use_adjacent_segment', False) or opt.get('use_segment', False):
+        early_modules.append('seg')
+    if opt.get('early_use_ref', False) or opt.get('use_ref', False):
+        early_modules.append('ref')
+    if opt.get('early_use_adjacent_baseline', False) or opt.get('use_adjacent', False):
+        early_modules.append('adj')
+
+    late_modules = []
+    if opt.get('late_use_adjacent_segment', False) or opt.get('use_segment', False):
+        late_modules.append('seg')
+    if opt.get('late_use_ref', False) or opt.get('use_ref', False):
+        late_modules.append('ref')
+    if opt.get('late_use_adjacent_baseline', False) or opt.get('use_adjacent', False):
+        late_modules.append('adj')
+
+    exp_parts = []
+    if early_modules:
+        exp_parts.append("early_" + "_".join(early_modules))
+    if late_modules:
+        exp_parts.append("late_" + "_".join(late_modules))
+    exp_type = "_".join(exp_parts) if exp_parts else "none"
+
+    # 权重严格对应模块顺序，adj 没权重
+    weight_vals = []
+    for mod in early_modules:
+        if mod == 'seg':
+            weight_vals.append(str(opt.get('early_semgent_weight', 'None')))
+        elif mod == 'ref':
+            weight_vals.append(str(opt.get('early_ref_weight', 'None')))
+    for mod in late_modules:
+        if mod == 'seg':
+            weight_vals.append(str(opt.get('late_segment_weight', 'None')))
+        elif mod == 'ref':
+            weight_vals.append(str(opt.get('late_ref_weight', 'None')))
+
+    weight_str = "_".join(weight_vals) if weight_vals else None
+
+    # ref_attention_end
+    ref_end = opt.get('ref_attention_end', None)
+    denoise_time_str = f"denoise_time_{ref_end}" if ref_end is not None else None
+
+    # seed
+    seed_dir = f"seed_{opt.get('seed', 0)}"
+
+    # 输出根目录
+    output_root = opt.get('output', "exp/mul_gen_mask")
+
+    # 当前时间戳（配置里有 timeformat 就用，没有就默认）
+    timeformat = opt.get('timeformat', '%d%b%Y-%H%M%S')
+    time_str = datetime.now().strftime(timeformat)
+
+    # 组合路径
+    path_parts = [output_root, mesh_name, exp_type]
+    if denoise_time_str:
+        path_parts.append(denoise_time_str)
+    if weight_str:
+        path_parts.append(weight_str)
+    path_parts.append(seed_dir)
+    path_parts.append(time_str)   # ✅ 在最后加时间戳
+
+    output_dir = join(*path_parts)
+    os.makedirs(output_dir, exist_ok=True)
+    return output_dir
+
 
 def main():
     parser = argparse.ArgumentParser(description='Run Multi-View Diffusion experiment')
@@ -26,7 +99,7 @@ def main():
     
     # 解析配置文件
     opt = parse_config(args.config)
-    gpu_id = opt.get('gpu_id', 0)   # 从 config 里取 GPU id
+    
     # 处理网格文件路径
     if opt.get('mesh_config_relative', False):
         mesh_path = join(dirname(args.config), opt['mesh'])
@@ -49,15 +122,16 @@ def main():
         output_name_components.append(datetime.now().strftime(timeformat))
     
     output_name = "_".join(output_name_components) or "output"
-    output_dir = join(output_root, output_name)
+    output_dir = make_experiment_dir(opt, mesh_path)
+    # join(output_root, output_name)
     
-    if not isdir(output_dir):
-        os.makedirs(output_dir, exist_ok=True)
-    else:
-        print(f"Output directory already exists: {output_dir}. Using time string to avoid conflict.")
-        output_name = f"{output_name}_{datetime.now().strftime('%H%M%S')}"
-        output_dir = join(output_root, output_name)
-        os.makedirs(output_dir, exist_ok=True)
+    # if not isdir(output_dir):
+    #     os.makedirs(output_dir, exist_ok=True)
+    # else:
+    #     print(f"Output directory already exists: {output_dir}. Using time string to avoid conflict.")
+    #     output_name = f"{output_name}_{datetime.now().strftime('%H%M%S')}"
+    #     output_dir = join(output_root, output_name)
+    #     os.makedirs(output_dir, exist_ok=True)
     
     print(f"Saving results to: {output_dir}")
     
@@ -106,13 +180,12 @@ def main():
         torch_dtype=torch.float16
     )
     pipe.scheduler = DDPMScheduler.from_config(pipe.scheduler.config)
-    # device = f"cuda:{gpu_id}" if torch.cuda.is_available() else "cpu"
-    # pipe = pipe.to(device)
+    # pipe = pipe.to('cuda:1')
     # 创建多视图扩散管道
-    syncmvd = StableSyncMVDPipeline(**pipe.components, gpu_id=gpu_id)
+    syncmvd = StableSyncMVDPipeline(**pipe.components)
     
     # 运行生成过程
-    result_tex_rgb, textured_views, v = syncmvd(
+    syncmvd(
         prompt=opt['prompt'],
         height=opt.get('latent_view_size', 128) * 8,
         width=opt.get('latent_view_size', 128) * 8,
@@ -131,7 +204,7 @@ def main():
         mesh_path=mesh_path,
         mesh_transform={"scale": opt.get('mesh_scale', 2.0)},
         mesh_autouv=not opt.get('keep_mesh_uv', False),
-        camera_azims=opt.get('camera_azims', [0, 90, 180, 270]),
+        camera_azims=opt.get('camera_azims', [0, 45, 90, 135, 180, 225, 270, 315]),
         top_cameras=not opt.get('no_top_cameras', False),
         texture_size=opt.get('latent_tex_size', 512),
         render_rgb_size=opt.get('rgb_view_size', 1536),
@@ -160,7 +233,7 @@ def main():
     )
     
     # 显示结果
-    display(v)
+    # display(v)
 
 if __name__ == "__main__":
     main()

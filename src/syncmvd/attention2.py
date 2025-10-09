@@ -255,11 +255,43 @@ class SamplewiseAttnProcessor2_0:
                 # seg_attn_mask = seg_attn_mask.expand(1, attn.heads, -1, -1)  # (1, H, S_q, S_k)
 
 
-                sim = (seg_ids_q[:, None] == seg_ids_k[None, :]).float()
                 # 相同部件 → 0 bias（无惩罚）
                 # 不同部件 → 加一个小的负偏置，而不是 -1e9
+                # segment_weight > 0 → 不同部件会被降低注意力，越大越强。
+
+                # segment_weight = 0 → 不同部件不受惩罚。
+
+                # segment_weight < 0 → 不同部件会被提升注意力（反而加成）。
+                sim = (seg_ids_q[:, None] == seg_ids_k[None, :]).float()
                 seg_attn_mask = (1 - sim) * (-self.segment_weight)   # 例如 -0.5 ~ -2
                 seg_attn_mask = seg_attn_mask[None, None, :, :].expand(1, attn.heads, -1, -1).to(query_b.dtype)
+
+                # controlnet background
+                bg_id = 0  # 背景 segment id
+
+                # # 相同 segment = 1，其它 = 0
+                # sim = (seg_ids_q[:, None] == seg_ids_k[None, :]).float()
+
+                # # ----------- 背景处理 -----------
+                # # key 是背景 → 前景不能 attend 它
+                # is_bg_k = (seg_ids_k == bg_id)[None, :]   # (1, S_k)
+                # # 把所有背景 key 的位置强制屏蔽
+                # sim = sim.masked_fill(is_bg_k, 0.0)
+
+                # # ----------- 生成 mask -----------
+                # # 对于前景不同 segment：给 -self.segment_weight
+                # # 对于背景：给 -1e9（完全屏蔽）
+                # seg_attn_mask = torch.full_like(sim, fill_value=-self.segment_weight)
+
+                # # 相同 segment → 不惩罚
+                # seg_attn_mask[sim == 1] = 0.0
+
+                # # 背景 key → 强制 -inf
+                # seg_attn_mask[:, is_bg_k.squeeze(0)] = -1e9
+
+                # # 扩展到 (1, heads, S_q, S_k)
+                # seg_attn_mask = seg_attn_mask[None, None, :, :].expand(1, attn.heads, -1, -1).to(query_b.dtype)
+
 
                 # print('seg_attn_mask shape:', seg_attn_mask.shape)
                 # print('segment query_b shape:', query_b.shape, 'segment_key_a_group shape:', key_a_group.shape, 'segment_value_a_group shape:', value_a_group.shape)
@@ -282,7 +314,7 @@ class SamplewiseAttnProcessor2_0:
             total_weight = 0
 
             if self.use_adjacent_baseline:
-                hidden_state += hidden_adj_base * 1
+                hidden_state += hidden_adj_base
                 total_weight += 1
             if self.use_adjacent_segment:
                 hidden_state += hidden_adj_seg
@@ -311,6 +343,7 @@ class SamplewiseAttnProcessor2_0:
                 -1, -2).reshape(batch_size, channel, height, width)
 
         if attn.residual_connection:
+            print('residual_connection')
             hidden_states = hidden_states + residual
 
         hidden_states = hidden_states / attn.rescale_output_factor
