@@ -163,7 +163,7 @@ class SpatialAware3DInpainting:
         return colors.numpy(), invalid_index_ori.numpy()
 
     @torch.no_grad()
-    def update_texture(self, position_map, cos_threshold=0.00001):
+    def update_texture(self, position_map, cos_threshold=0.17):
         """
         Updates the texture map by interpolating missing colors using the position map.
 

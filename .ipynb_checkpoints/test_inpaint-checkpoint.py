@@ -1,0 +1,1 @@
+from src.texture_inpainting_pipeline import TextureInpaintingPipeline

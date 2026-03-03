@@ -1,3 +1,4 @@
+# 新版稳定的但测试失败的那个
 import torch
 import pytorch3d
 
@@ -293,25 +294,25 @@ class UVProjection():
         # 渲染大小，模糊半径，每个像素的最大面数，透视校正，渲染通道
         if not channels:
             channels = self.channels
-        # self.raster_settings = RasterizationSettings(
-        #     image_size=size,
-        #     blur_radius=0.0,  # 无抗锯齿
-        #     faces_per_pixel=1,  # 每个像素只考虑一个面
-        #     bin_size=0,  # 使用朴素光栅化
-        #     perspective_correct=False,  # 根据nvdiffrast的设置调整
-        #     clip_barycentric_coords=False,  # 不裁剪重心坐标
-        #     cull_backfaces=False,  # 不禁用背面剔除
-        #     z_clip_value=None,  # 禁用深度裁剪
-        #     cull_to_frustum=False,  # 不禁用视锥裁剪
-        # )
         self.raster_settings = RasterizationSettings(
-        	image_size=size, 
-        	blur_radius=blur, 
-        	faces_per_pixel=face_per_pix,
-        	perspective_correct=perspective_correct,
-        	cull_backfaces=True,
-        	max_faces_per_bin=30000,
+            image_size=size,
+            blur_radius=0.0,  # 无抗锯齿
+            faces_per_pixel=1,  # 每个像素只考虑一个面
+            bin_size=0,  # 使用朴素光栅化
+            perspective_correct=False,  # 根据nvdiffrast的设置调整
+            clip_barycentric_coords=False,  # 不裁剪重心坐标
+            cull_backfaces=False,  # 不禁用背面剔除
+            z_clip_value=None,  # 禁用深度裁剪
+            cull_to_frustum=False,  # 不禁用视锥裁剪
         )
+        # self.raster_settings = RasterizationSettings(
+        # 	image_size=size, 
+        # 	blur_radius=blur, 
+        # 	faces_per_pixel=face_per_pix,
+        # 	perspective_correct=perspective_correct,
+        # 	cull_backfaces=True,
+        # 	max_faces_per_bin=30000,
+        # )
 
         self.renderer = MeshRenderer(
             rasterizer=MeshRasterizer(	
@@ -352,7 +353,6 @@ class UVProjection():
             optimizer.step()
 
             # if fill:
-            #     print('fill')  
             #     zero_map = zero_map.detach() / (self.gradient_maps[i] + 1E-8)
             #     zero_map = voronoi_solve(zero_map, self.gradient_maps[i][...,0])
             # else:
@@ -648,6 +648,9 @@ class UVProjection():
             total_weights += weight
             baked += bake_map * weight
         baked /= total_weights + 1E-8
+        # baked = voronoi_solve(baked, total_weights[...,0])
+        
+        
         bake_tex = TexturesUV([baked], tmp_mesh.textures.faces_uvs_padded(), tmp_mesh.textures.verts_uvs_padded(), sampling_mode=self.sampling_mode)
         tmp_mesh.textures = bake_tex
         extended_mesh = tmp_mesh.extend(len(self.cameras))

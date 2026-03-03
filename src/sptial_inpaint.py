@@ -72,8 +72,8 @@ class SpatialAware3DInpainting:
             colors, invalid_index = self.knn_color_completion(points, colors, color_mask)
             # filled_mask[invalid_index] = True  # 补全过的点
 
-        # 把补全的区域涂红
-        colors[black_mask] = np.array([1.0, 0.0, 0.0])  # 红色标记
+        # # 把补全的区域涂红
+        # colors[black_mask] = np.array([1.0, 0.0, 0.0])  # 红色标记
 
         return np.concatenate([points, colors], 1)
 
@@ -221,7 +221,6 @@ class SpatialAware3DInpainting:
         result_tex_rgb = torch.where(bigger_region > 0, result_tex_rgb, 1)
 
         # ========== 红色三角可视化 ==========
-        # 复制最终补全纹理
         # 复制最终补全纹理
         red_vis_tex = result_tex_rgb.clone()  # [H, W, 3]
 

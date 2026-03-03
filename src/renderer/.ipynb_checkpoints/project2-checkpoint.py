@@ -244,6 +244,7 @@ class UVProjection():
         if not channels:
             channels = self.channels
         noise_texture = torch.normal(0, 1, (channels,) + self.target_size, device=self.device)
+        print('noise_texture shape is: ', noise_texture.shape)
         self.set_texture_map(noise_texture)
         return noise_texture
 
@@ -352,11 +353,9 @@ class UVProjection():
             optimizer.step()
 
             # if fill:
-            #     print('fill')  
             #     zero_map = zero_map.detach() / (self.gradient_maps[i] + 1E-8)
             #     zero_map = voronoi_solve(zero_map, self.gradient_maps[i][...,0])
             # else:
-                # uvp_rgb最后是false
             zero_map = zero_map.detach() / (self.gradient_maps[i]+1E-8)
             cos_maps.append(zero_map)
         self.cos_maps = cos_maps
@@ -486,7 +485,6 @@ class UVProjection():
         # 	z_clip_value=0.001,    # 更小的裁剪值
         # 	cull_to_frustum=False, # 禁用视锥体裁剪
         # )
-
         raster_settings = RasterizationSettings(
             image_size=self.target_size, 
             blur_radius=0, 
@@ -495,6 +493,7 @@ class UVProjection():
             cull_backfaces=False,
             max_faces_per_bin=30000,
         )
+        # 之前是下面这个
         # raster_settings = RasterizationSettings(
         #     image_size=self.target_size,
         #     blur_radius=0.0,  # 无抗锯齿
@@ -545,15 +544,6 @@ class UVProjection():
 
         return [image.permute(2, 0, 1) for image in images_predicted]
     
-    def render_multi_views(self, cameras):
-        azim = torch.FloatTensor([pose[1] for pose in cameras])
-        elev = torch.FloatTensor([pose[0] for pose in cameras])
-        R, T = look_at_view_transform(dist=2.7, elev=elev,
-                                        azim=azim, at=((0,0,0),))
-        cameras = FoVOrthographicCameras(device=self.device, R=R, T=T)
-        images_predicted = self.renderer(self.mesh.extend(len(cameras)), cameras=cameras, lights=self.lights)
-        return [image.permute(2, 0, 1) for image in images_predicted]
-
     def render_single_view(self, camera):
         images_predicted = self.renderer(self.mesh, cameras=camera, lights=self.lights)
         return images_predicted[0].permute(2, 0, 1)
@@ -648,6 +638,9 @@ class UVProjection():
             total_weights += weight
             baked += bake_map * weight
         baked /= total_weights + 1E-8
+        # 注意这个voronoi_solve也是最后加的
+        # baked = voronoi_solve(baked, total_weights[...,0])
+        
         bake_tex = TexturesUV([baked], tmp_mesh.textures.faces_uvs_padded(), tmp_mesh.textures.verts_uvs_padded(), sampling_mode=self.sampling_mode)
         tmp_mesh.textures = bake_tex
         extended_mesh = tmp_mesh.extend(len(self.cameras))
