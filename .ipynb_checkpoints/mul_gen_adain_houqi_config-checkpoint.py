@@ -9,7 +9,7 @@ img_dir = Path("/root/autodl-tmp/bishetest/")
 prompt_dir = Path("/root/autodl-tmp/bishetest/")
 
 # 生成的 yaml 存放目录
-output_dir = Path("config/bishe_6views_ours_gd7_5/gd7_5_adain_yizhi_0_5_3_0_norefattn_no_adj_no_adain") # 改个名防止混淆
+output_dir = Path("config/bishe_6views_ours_gd7_5/gd7_5_adain_yizhi_0_5_3_0_norefattn_full_design_start_0.7") # 改个名防止混淆
 output_dir.mkdir(parents=True, exist_ok=True)
 
 # face2label 映射 JSON 路径
@@ -51,7 +51,7 @@ base_config = {
     "mesh_scale": 2.0,
     "keep_mesh_uv": False,
     
-    "output": "./exp/gd7_5_adain_yizhi_0_5_3_0_norefattn_no_adj_no_adain/", 
+    "output": "./exp/gd7_5_adain_yizhi_0_5_3_0_norefattn_full_design_start_0.7/result", 
     "prefix": "MVD",
     "timeformat": "%d%b%Y-%H%M%S",
     
@@ -102,15 +102,15 @@ experiment_groups = [
     {
         "name_suffix": "base_noyizhi",
         "params": {
-            "late_use_adjacent_baseline": False,
+            "late_use_adjacent_baseline": True,
             "late_use_adjacent_segment": False,
-            "early_use_adjacent_baseline": False,
+            "early_use_adjacent_baseline": True,
             "early_use_adjacent_segment": False,
-            "early_segment_weight": 0.0,
-            "late_segment_weight": 0.0,
-            "yizhi": False,
-            "yizhi_start": 0.0,
-            "yizhi_end": 1.0
+            "early_segment_weight": 3.0,
+            "late_segment_weight": 3.0,
+            "yizhi": True,
+            "yizhi_start": 0.7,
+            "yizhi_end": 0.7
         }
     },
     # (2) Segment W=3.0 No Yizhi
@@ -205,7 +205,7 @@ adain_variations = [
     {
         "suffix": "adain_first",
         "params": {
-            "adain_first": 0,
+            "adain_first": 1,
             "adain_early": False,
             "adain_time": 0.3
         }

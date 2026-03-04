@@ -1442,7 +1442,11 @@ class StableSyncMVDPipeline(StableDiffusionControlNetPipeline):
                                     # 现在的 t 在 (start_step, end_step) 之间
                                     # start_step 是大数(比如800)，end_step 是小数(比如200)
                                     # 我们希望从 0.0 开始，所以用 (start - t)
-                                    ratio = (start_step - t) / (start_step - end_step)
+                                    # 用来处理起点终点相同的那个参数实验, 防止除法为0
+                                    if start_step == end_step: 
+                                        ratio = 1.0
+                                    else:
+                                        ratio = (start_step - t) / (start_step - end_step)
                                     # print('yizhi ')
                                     # 2. 计算动态权重
                                     # 初始是 0.0，结束时达到 early_segment_weight
