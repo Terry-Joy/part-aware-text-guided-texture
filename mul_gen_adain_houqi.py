@@ -6,7 +6,7 @@ import os
 from tqdm import tqdm
 
 # ================= 配置区域 =================
-YAML_DIR = "config/bishe_6views_ours_gd7_5/gd7_5_adain_yizhi_0_5_3_0_norefattn_full_design_start_0.0"
+YAML_DIR = "config/bishe_6views_ours_gd7_5/gd7_5_adain_yizhi_0_5_3_0_norefattn_full_design_start_0.7"
 # 定义记录成功历史的文件路径
 SUCCESS_LOG_PATH = Path(YAML_DIR) / "success_history.txt"
 # ===========================================

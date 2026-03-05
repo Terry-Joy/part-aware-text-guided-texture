@@ -251,4 +251,12 @@ if __name__ == "__main__":
     
 # python mul_texture_inpaint.py --root_dir ../exp_adain_05_30_norefattn_real_jiaocha_6views_25 --labels_dir ../bishetest --gpu_ids "0,1,2,3,4,5,6,7" 
 
-# python mul_texture_inpaint.py --root_dir exp/gd7_5_adain_yizhi_0_5_3_0_norefattn_no_adj_no_adain/ --labels_dir ../bishetest/ --gpu_ids "0,1,2,3,4,5,6,7"
+# python mul_texture_inpaint.py --root_dir exp/gd7_5_adain_yizhi_0_5_3_0_norefattn_no_adain/ --labels_dir ../bishetest/ --gpu_ids "0,1,2,3,4,5,6"
+
+# python mul_texture_inpaint.py --root_dir exp/gd7_5_adain_yizhi_0_5_3_0_norefattn_full_design/ --labels_dir ../bishetest/ --gpu_ids "0,1,2,3,4,5,6"
+
+# python mul_texture_inpaint.py --root_dir exp/gd7_5_adain_yizhi_0_5_3_0_norefattn_full_design_start_0.0/ --labels_dir ../bishetest/ --gpu_ids "0,1,2,3,4,5,6"
+
+# python mul_texture_inpaint.py --root_dir exp/gd7_5_adain_yizhi_0_5_3_0_norefattn_full_design_start_0.3/ --labels_dir ../bishetest/ --gpu_ids "0,1,2,3,4,5,6"
+
+# python mul_texture_inpaint.py --root_dir exp/gd7_5_adain_yizhi_0_5_3_0_norefattn_full_design_start_0.7/ --labels_dir ../bishetest/ --gpu_ids "0,1,2,3,4,5,6"

@@ -6,7 +6,7 @@ mesh_config_relative: true
 use_mesh_name: false
 mesh_scale: 2.0
 keep_mesh_uv: false
-output: ./exp/gd7_5_adain_yizhi_0_5_3_0_norefattn_no_adain/result
+output: ./exp/test/result
 prefix: MVD
 timeformat: '%d%b%Y-%H%M%S'
 steps: 30
