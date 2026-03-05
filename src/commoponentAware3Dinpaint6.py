@@ -121,6 +121,7 @@ class ComponentAware3DInpaintingGPU2:
         points = position_map.reshape(-1, 3)
         colors = texture.reshape(-1, 3).clone()
         
+        
         # =========================================================
         # 1. 定义初始空洞 (Holes)
         # 结合了: (1) 原始黑色点 (2) Max Cos 低的点 (Reliability)
