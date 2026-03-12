@@ -1,0 +1,4 @@
+/root/autodl-tmp/part-aware-text-guided-texture/inpaint_data/07fe989ba464464fae6943445703afca_prompt1_seed3_full_design
+/root/autodl-tmp/part-aware-text-guided-texture/inpaint_data/07fe989ba464464fae6943445703afca_prompt1_seed3_no_adj
+/root/autodl-tmp/part-aware-text-guided-texture/inpaint_data/07fe989ba464464fae6943445703afca_prompt1_seed3_noyizhi
+/root/autodl-tmp/part-aware-text-guided-texture/inpaint_data/07fe989ba464464fae6943445703afca_prompt1_seed3_no_adain
