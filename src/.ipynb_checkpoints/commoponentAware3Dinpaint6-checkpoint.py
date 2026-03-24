@@ -131,7 +131,7 @@ class ComponentAware3DInpaintingGPU2:
         
         # 哪些点是"有颜色"的？(Cos 高 且 不黑)
         # 注意：这里取反，fill_mask 是需要被填的洞
-        is_reliable = (self.max_cos_map >= 0.15) & (luminance >= 0.01)
+        is_reliable = (self.max_cos_map >= 0.25) & (luminance >= 0.01)
         fill_mask = valid_pixel & (~is_reliable)
         
         invalid_index = torch.nonzero(fill_mask, as_tuple=True)[0]

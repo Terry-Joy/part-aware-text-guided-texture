@@ -310,7 +310,8 @@ class UVProjection():
         	faces_per_pixel=face_per_pix,
         	perspective_correct=perspective_correct,
         	cull_backfaces=True,
-        	max_faces_per_bin=30000,
+            bin_size=0,
+        	# max_faces_per_bin=30000,
         )
 
         self.renderer = MeshRenderer(
@@ -493,7 +494,8 @@ class UVProjection():
             faces_per_pixel=1,
             perspective_correct=False,
             cull_backfaces=False,
-            max_faces_per_bin=30000,
+            bin_size=0,
+            # max_faces_per_bin=30000,
         )
         # raster_settings = RasterizationSettings(
         #     image_size=self.target_size,

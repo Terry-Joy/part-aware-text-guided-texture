@@ -15,7 +15,28 @@ TASKS_CONFIG = {
     # "inpaint_data/07fe989ba464464fae6943445703afca_prompt1_seed3_full_design": "07fe989ba464464fae6943445703afca",
     # "inpaint_data/07fe989ba464464fae6943445703afca_prompt1_seed3_no_adj": "07fe989ba464464fae6943445703afca",
     # "inpaint_data/07fe989ba464464fae6943445703afca_prompt1_seed3_noyizhi": "07fe989ba464464fae6943445703afca",
-    "inpaint_data/07fe989ba464464fae6943445703afca_prompt1_seed3_no_adain": "07fe989ba464464fae6943445703afca",
+    # "inpaint_data/07fe989ba464464fae6943445703afca_prompt1_seed3_no_adain": "07fe989ba464464fae6943445703afca",
+    # "inpaint_data/honglvshuibei_8cdaa8d8fbc34606a734f3dbd1e63e12/full_design": "8cdaa8d8fbc34606a734f3dbd1e63e12", 
+    # "inpaint_data/honglvshuibei_8cdaa8d8fbc34606a734f3dbd1e63e12/no_adj": "8cdaa8d8fbc34606a734f3dbd1e63e12",
+    # "inpaint_data/honglvshuibei_8cdaa8d8fbc34606a734f3dbd1e63e12/no_yizhi": "8cdaa8d8fbc34606a734f3dbd1e63e12",
+    # "inpaint_data/honglvshuibei_8cdaa8d8fbc34606a734f3dbd1e63e12/no_adain": "8cdaa8d8fbc34606a734f3dbd1e63e12",
+    #     "inpaint_data/xiaorong_sofa/zhen_full_design_jia_no_yizhi": "0401a13ba90d4f5c8c07954abcd6922c", 
+    # "inpaint_data/xiaorong_sofa/zhen_no_yizhi_jia_full_design": "0401a13ba90d4f5c8c07954abcd6922c",
+    # "inpaint_data/xiaorong_sofa/no_adj": "0401a13ba90d4f5c8c07954abcd6922c",
+    # "inpaint_data/caomei3/no_adain": "6e95a8cb47114f2285be08a70e8990b6",
+    # "inpaint_data/caomei/no_yizhi": "6e95a8cb47114f2285be08a70e8990b6", 
+    # "inpaint_data/caomei/no_adj": "6e95a8cb47114f2285be08a70e8990b6", 
+    # "inpaint_data/caomei/no_adain": "6e95a8cb47114f2285be08a70e8990b6", 
+
+    # "inpaint_data/user_study/01b52fada7f94115b0d6431cfb0d5b21":"01b52fada7f94115b0d6431cfb0d5b21",
+    # "inpaint_data/user_study/2ef369ebae66464f9d2479057a6bf6d2":"2ef369ebae66464f9d2479057a6bf6d2",
+    # "inpaint_data/user_study/8d3d39516f7b40d5aa19e85226940899":"8d3d39516f7b40d5aa19e85226940899",
+    # "inpaint_data/user_study/07aa44e2f864476f998e3ada75ccfa45":"07aa44e2f864476f998e3ada75ccfa45",
+    # "inpaint_data/user_study/5ae212805ceb43f6981243db2eb8c501":"5ae212805ceb43f6981243db2eb8c501",
+    # "inpaint_data/user_study/aa1a732d4fdc44e0a20cee312a929d77":"aa1a732d4fdc44e0a20cee312a929d77",
+    # "inpaint_data/user_study/1bb0cf7261174670ad1134093875e1d1":"1bb0cf7261174670ad1134093875e1d1",
+    # "inpaint_data/user_study/77d56cc994f94d8280c38009688e7413":"77d56cc994f94d8280c38009688e7413"
+    "inpaint_data/xin_buquan_test/": "0a505cc6635745edbcf9476b65402a53"
 }
 
 DEFAULT_LABELS_DIR = "../bishetest"
@@ -38,13 +59,13 @@ def load_base_config(config_path):
         "mesh_transform": {"scale": 2.0},
         "mesh_autouv": False,
         "texture_path": "",
-        "camera_azims": [0, 60, 120, 180, 240, 300],
-        "camera_elev": [0, 0, 0, 0, 0, 0],
+        "camera_azims": [0, 180],
+        "camera_elev": [0, 0],
         "camera_centers": None,
         "texture_size": 1024,
         "render_rgb_size": 1024,
         "texture_rgb_size": 1024,
-        "inpainting_method": "component5",
+        "inpainting_method": "component6",
         "face2label_path": None, 
         "output_dir": "",
         "log_interval": 10,
@@ -159,10 +180,10 @@ def main():
     print(f"--- 精准 ID 指定模式 ---")
     for path, mid in TASKS_CONFIG.items():
         abs_folder = os.path.abspath(path)
-        if abs_folder in processed_set:
-            skipped_count += 1
-            print(f"跳过已处理: {path}")
-            continue
+        # if abs_folder in processed_set:
+        #     skipped_count += 1
+        #     print(f"跳过已处理: {path}")
+        #     continue
         task_queue.put({"path": path, "id": mid})
         task_count += 1
 

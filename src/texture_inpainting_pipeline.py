@@ -16,6 +16,7 @@ from .commoponentAware3Dinpaint3 import ComponentAware3DInpainting as ComponentA
 from .commoponentAware3Dinpaint4 import ComponentAware3DInpaintingGPU as ComponentAware3DInpainting_v3
 from .commoponentAware3Dinpaint5 import ComponentAware3DInpaintingGPU as ComponentAware3DInpainting_v4
 from .commoponentAware3Dinpaint6 import ComponentAware3DInpaintingGPU2 as ComponentAware3DInpainting_v5
+from .commoponentAware3Dinpaint7 import ComponentAware3DInpaintingGPU2 as ComponentAware3DInpainting_v6
 from diffusers.utils import numpy_to_pil
 
 class TextureInpaintingPipeline:
@@ -230,6 +231,11 @@ class TextureInpaintingPipeline:
                 result_tex_rgb, _, red_mask = inpainter(result_tex_rgb)
             elif inpainting_method == "component5" and face2label_path and os.path.exists(face2label_path):
                 inpainter = ComponentAware3DInpainting_v5(
+                    mesh, self.device, self.max_cos_map, self.avg_cos_map, face2label_path
+                )
+                result_tex_rgb, _, red_mask = inpainter(result_tex_rgb)
+            elif inpainting_method == "component6" and face2label_path and os.path.exists(face2label_path):
+                inpainter = ComponentAware3DInpainting_v6(
                     mesh, self.device, self.max_cos_map, self.avg_cos_map, face2label_path
                 )
                 result_tex_rgb, _, red_mask = inpainter(result_tex_rgb)

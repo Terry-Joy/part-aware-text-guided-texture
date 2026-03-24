@@ -26,8 +26,16 @@ def load_base_config(config_path):
         "mesh_transform": {"scale": 2.0},
         "mesh_autouv": False,
         "texture_path": "",
-        "camera_azims": [0, 60, 120, 180, 240, 300],
-        "camera_elev": [0, 0, 0, 0, 0, 0],
+        # "camera_azims": [0, 60, 120, 180, 240, 300], 6views
+        # "camera_elev": [0, 0, 0, 0, 0, 0],
+        # "camera_azims": [0, 180], # 2views
+        # "camera_elev": [0, 0],
+        # "camera_azims": [0, 90, 180, 270], # 4views
+        # "camera_elev": [0, 0, 0, 0],
+        # "camera_azims": [0, 45, 90, 135, 180, 225, 270, 315], # 8 views
+        # "camera_elev": [0, 0, 0, 0, 0, 0, 0, 0],
+        "camera_azims": [0, 22.5, 45, 67.5, 90, 112.5, 135, 157.5, 180, 202.5, 225, 247.5, 270, 292.5, 315, 337.5],
+        "camera_elev": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
         "camera_centers": None,
         "texture_size": 1024,
         "render_rgb_size": 1024,
@@ -260,3 +268,11 @@ if __name__ == "__main__":
 # python mul_texture_inpaint.py --root_dir exp/gd7_5_adain_yizhi_0_5_3_0_norefattn_full_design_start_0.3/ --labels_dir ../bishetest/ --gpu_ids "0,1,2,3,4,5,6"
 
 # python mul_texture_inpaint.py --root_dir exp/gd7_5_adain_yizhi_0_5_3_0_norefattn_full_design_start_0.7/ --labels_dir ../bishetest/ --gpu_ids "0,1,2,3,4,5,6"
+
+# python mul_texture_inpaint.py --root_dir exp/gd7_5_adain_yizhi_0_5_3_0_norefattn_2views/ --labels_dir ../bishetest/ --gpu_ids "0,1,2,3"
+
+# python mul_texture_inpaint.py --root_dir exp/gd7_5_adain_yizhi_0_5_3_0_norefattn_4views/ --labels_dir ../bishetest/ --gpu_ids "0,1,2,3"
+
+# python mul_texture_inpaint.py --root_dir exp/gd7_5_adain_yizhi_0_5_3_0_norefattn_8views/ --labels_dir ../bishetest/ --gpu_ids "0,1,2,3"
+
+# python mul_texture_inpaint.py --root_dir exp/gd7_5_adain_yizhi_0_5_3_0_norefattn_16views/ --labels_dir ../bishetest/ --gpu_ids "0,1,2,3"

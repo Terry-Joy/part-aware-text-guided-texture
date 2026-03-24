@@ -4,12 +4,12 @@ import yaml
 from pathlib import Path
 
 # === 用户可配置路径 ===
-mesh_dir = Path("/root/autodl-tmp/bishetest/")
-img_dir = Path("/root/autodl-tmp/bishetest/")
-prompt_dir = Path("/root/autodl-tmp/bishetest/")
+mesh_dir = Path("/root/autodl-tmp/bishe_test_cases/")
+img_dir = Path("/root/autodl-tmp/bishe_test_cases/")
+prompt_dir = Path("/root/autodl-tmp/bishe_test_cases/")
 
 # 生成的 yaml 存放目录
-output_dir = Path("config/bishe_6views_ours_gd7_5/gd7_5_adain_yizhi_0_5_3_0_norefattn_full_design_start_0.7") # 改个名防止混淆
+output_dir = Path("config/bishe_6views_ours_gd7_5/gd7_5_adain_yizhi_0_5_3_0_norefattn_16views") # 改个名防止混淆
 output_dir.mkdir(parents=True, exist_ok=True)
 
 # face2label 映射 JSON 路径
@@ -17,7 +17,7 @@ face2label_json = "/root/autodl-tmp/part-aware-text-guided-texturelact_nvs_exp/l
 
 # === 其它超参数 ===
 seeds = [1, 3]  # 每个 obj 的 seed 数量
-gpu_num = 8
+gpu_num = 4
 
 # ref_attention_end 消融
 ref_attention_end_values = [0.2]
@@ -51,7 +51,7 @@ base_config = {
     "mesh_scale": 2.0,
     "keep_mesh_uv": False,
     
-    "output": "./exp/gd7_5_adain_yizhi_0_5_3_0_norefattn_full_design_start_0.7/result", 
+    "output": "./exp/gd7_5_adain_yizhi_0_5_3_0_norefattn_16views/result", 
     "prefix": "MVD",
     "timeformat": "%d%b%Y-%H%M%S",
     
@@ -64,7 +64,12 @@ base_config = {
     "control_guidance_end": 0.99,
     "guidance_rescale": 0.0,
     
-    "camera_azims": [0, 60, 120, 180, 240, 300],
+    # "camera_azims": [0, 60, 120, 180, 240, 300],
+    # "camera_azims": [0, 45, 90, 135, 180, 225, 270, 315],
+    # "camera_azims": [0, 270, 180, 90], # 4views
+    # "camera_azims": [0, 90, 180, 270],
+    # "camera_azims": [0, 180],
+    "camera_azims": [0, 22.5, 45, 67.5, 90, 112.5, 135, 157.5, 180, 202.5, 225, 247.5, 270, 292.5, 315, 337.5], 
     "no_top_cameras": False,
     
     "latent_view_size": 96,
@@ -100,7 +105,7 @@ base_config = {
 experiment_groups = [
     # (1) Baseline
     {
-        "name_suffix": "base_noyizhi",
+        "name_suffix": "full_design",
         "params": {
             "late_use_adjacent_baseline": True,
             "late_use_adjacent_segment": False,
@@ -109,7 +114,7 @@ experiment_groups = [
             "early_segment_weight": 3.0,
             "late_segment_weight": 3.0,
             "yizhi": True,
-            "yizhi_start": 0.7,
+            "yizhi_start": 0.5,
             "yizhi_end": 0.7
         }
     },
@@ -242,7 +247,8 @@ adain_variations = [
 
 for obj_idx, obj_id in enumerate(selected_ids):
     mesh_path = mesh_dir / obj_id / "glb"/ f"{obj_id}.obj"
-    img_path = img_dir / obj_id / "segment_6views_render"/ f"{obj_id}_segment_6views_modify_render_concat.png"
+    # img_path = img_dir / obj_id / "segment_2views_render"/ f"{obj_id}_segment_6views_modify_render_concat.png"
+    img_path = img_dir / obj_id / "segment_16views_render"/ f"{obj_id}_labelcolor_768x768_concat.png"
     prompt_path = prompt_dir / obj_id / f"{obj_id}_prompt.json"
 
     # 读取 Prompt
