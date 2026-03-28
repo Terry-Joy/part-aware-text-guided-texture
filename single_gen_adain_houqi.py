@@ -6,7 +6,8 @@ import torch
 from diffusers import StableDiffusionControlNetPipeline, ControlNetModel
 from diffusers import DDPMScheduler
 # pipeline2 测试
-from src.houqi_pipeline import StableSyncMVDPipeline
+# from src.houqi_pipeline import StableSyncMVDPipeline
+from src.mul_obj_texture_pipeline import StableSyncMVDPipeline
 # from src.global_average_pipeline import StableSyncMVDPipeline
 # from src.houqi_vis_pipeline import StableSyncMVDPipeline
 import yaml

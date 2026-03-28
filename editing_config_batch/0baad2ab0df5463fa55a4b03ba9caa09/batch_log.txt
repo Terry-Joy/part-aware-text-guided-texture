@@ -1,0 +1,224 @@
+[2026-03-26 01:46:30] ======================================================================
+[2026-03-26 01:46:30] 批量任务启动 | Prompts: 40 | Seeds/Prompt: 2
+[2026-03-26 01:46:30] 总任务数：80 | 待运行：80 | 并行：2
+[2026-03-26 01:46:30] GPU: 0 | OMP_THREADS: 1
+[2026-03-26 01:46:30] ======================================================================
+[2026-03-26 01:46:31] 
+已生成 80 个配置文件
+[2026-03-26 01:46:31] ======================================================================
+[2026-03-26 01:46:31] 开始执行任务...
+[2026-03-26 01:46:31] ======================================================================
+[2026-03-26 01:46:31] 
+[任务 1] 开始 | seed=3 | Peanut butter jar with blue cap, blue la...
+[2026-03-26 01:46:31] 
+[任务 2] 开始 | seed=1 | Peanut butter jar with blue cap, blue la...
+[2026-03-26 01:46:31] 配置文件：editing_config_batch/0baad2ab0df5463fa55a4b03ba9caa09/0baad2ab0df5463fa55a4b03ba9caa09_seed3_prompt_1_base_w3_yizhi0507_adain_first_batch001_seed1.yaml
+[2026-03-26 01:46:31] 配置文件：editing_config_batch/0baad2ab0df5463fa55a4b03ba9caa09/0baad2ab0df5463fa55a4b03ba9caa09_seed3_prompt_1_base_w3_yizhi0507_adain_first_batch000_seed3.yaml
+[2026-03-26 01:53:33] ✓ [任务 1] 完成 | seed=3 | (421.7s)
+[2026-03-26 01:53:33] 
+[任务 3] 开始 | seed=3 | Peanut butter jar with green cap, green ...
+[2026-03-26 01:53:33] 配置文件：editing_config_batch/0baad2ab0df5463fa55a4b03ba9caa09/0baad2ab0df5463fa55a4b03ba9caa09_seed3_prompt_1_base_w3_yizhi0507_adain_first_batch002_seed3.yaml
+[2026-03-26 01:53:34] ✓ [任务 2] 完成 | seed=1 | (422.9s)
+[2026-03-26 01:53:34] 
+[任务 4] 开始 | seed=1 | Peanut butter jar with green cap, green ...
+[2026-03-26 01:53:34] 配置文件：editing_config_batch/0baad2ab0df5463fa55a4b03ba9caa09/0baad2ab0df5463fa55a4b03ba9caa09_seed3_prompt_1_base_w3_yizhi0507_adain_first_batch003_seed1.yaml
+[2026-03-26 02:00:24] ✓ [任务 3] 完成 | seed=3 | (411.7s)
+[2026-03-26 02:00:24] 
+[任务 5] 开始 | seed=1 | Peanut butter jar with yellow cap, yello...
+[2026-03-26 02:00:24] 配置文件：editing_config_batch/0baad2ab0df5463fa55a4b03ba9caa09/0baad2ab0df5463fa55a4b03ba9caa09_seed3_prompt_1_base_w3_yizhi0507_adain_first_batch004_seed1.yaml
+[2026-03-26 02:00:29] ✓ [任务 4] 完成 | seed=1 | (414.8s)
+[2026-03-26 02:00:29] 
+[任务 6] 开始 | seed=3 | Peanut butter jar with yellow cap, yello...
+[2026-03-26 02:00:29] 配置文件：editing_config_batch/0baad2ab0df5463fa55a4b03ba9caa09/0baad2ab0df5463fa55a4b03ba9caa09_seed3_prompt_1_base_w3_yizhi0507_adain_first_batch005_seed3.yaml
+[2026-03-26 02:07:17] ✓ [任务 5] 完成 | seed=1 | (413.0s)
+[2026-03-26 02:07:17] 
+[任务 7] 开始 | seed=1 | Peanut butter jar with orange cap, orang...
+[2026-03-26 02:07:17] 配置文件：editing_config_batch/0baad2ab0df5463fa55a4b03ba9caa09/0baad2ab0df5463fa55a4b03ba9caa09_seed3_prompt_1_base_w3_yizhi0507_adain_first_batch006_seed1.yaml
+[2026-03-26 02:07:22] ✓ [任务 6] 完成 | seed=3 | (413.3s)
+[2026-03-26 02:07:22] 
+[任务 8] 开始 | seed=3 | Peanut butter jar with orange cap, orang...
+[2026-03-26 02:07:22] 配置文件：editing_config_batch/0baad2ab0df5463fa55a4b03ba9caa09/0baad2ab0df5463fa55a4b03ba9caa09_seed3_prompt_1_base_w3_yizhi0507_adain_first_batch007_seed3.yaml
+[2026-03-26 02:14:17] ✓ [任务 7] 完成 | seed=1 | (420.0s)
+[2026-03-26 02:14:17] 
+[任务 9] 开始 | seed=1 | Peanut butter jar with purple cap, purpl...
+[2026-03-26 02:14:17] 配置文件：editing_config_batch/0baad2ab0df5463fa55a4b03ba9caa09/0baad2ab0df5463fa55a4b03ba9caa09_seed3_prompt_1_base_w3_yizhi0507_adain_first_batch008_seed1.yaml
+[2026-03-26 02:14:25] ✓ [任务 8] 完成 | seed=3 | (423.6s)
+[2026-03-26 02:14:25] 
+[任务 10] 开始 | seed=3 | Peanut butter jar with purple cap, purpl...
+[2026-03-26 02:14:25] 配置文件：editing_config_batch/0baad2ab0df5463fa55a4b03ba9caa09/0baad2ab0df5463fa55a4b03ba9caa09_seed3_prompt_1_base_w3_yizhi0507_adain_first_batch009_seed3.yaml
+[2026-03-26 02:21:18] ✓ [任务 9] 完成 | seed=1 | (420.4s)
+[2026-03-26 02:21:18] 
+[任务 11] 开始 | seed=1 | Peanut butter jar with pink cap, pink la...
+[2026-03-26 02:21:18] 配置文件：editing_config_batch/0baad2ab0df5463fa55a4b03ba9caa09/0baad2ab0df5463fa55a4b03ba9caa09_seed3_prompt_1_base_w3_yizhi0507_adain_first_batch010_seed1.yaml
+[2026-03-26 02:21:23] ✓ [任务 10] 完成 | seed=3 | (417.2s)
+[2026-03-26 02:21:23] 
+[任务 12] 开始 | seed=3 | Peanut butter jar with pink cap, pink la...
+[2026-03-26 02:21:23] 配置文件：editing_config_batch/0baad2ab0df5463fa55a4b03ba9caa09/0baad2ab0df5463fa55a4b03ba9caa09_seed3_prompt_1_base_w3_yizhi0507_adain_first_batch011_seed3.yaml
+[2026-03-26 02:28:10] ✓ [任务 11] 完成 | seed=1 | (411.9s)
+[2026-03-26 02:28:10] 
+[任务 13] 开始 | seed=3 | Peanut butter jar with black cap, black ...
+[2026-03-26 02:28:10] 配置文件：editing_config_batch/0baad2ab0df5463fa55a4b03ba9caa09/0baad2ab0df5463fa55a4b03ba9caa09_seed3_prompt_1_base_w3_yizhi0507_adain_first_batch012_seed3.yaml
+[2026-03-26 02:28:17] ✓ [任务 12] 完成 | seed=3 | (414.4s)
+[2026-03-26 02:28:17] 
+[任务 14] 开始 | seed=1 | Peanut butter jar with black cap, black ...
+[2026-03-26 02:28:17] 配置文件：editing_config_batch/0baad2ab0df5463fa55a4b03ba9caa09/0baad2ab0df5463fa55a4b03ba9caa09_seed3_prompt_1_base_w3_yizhi0507_adain_first_batch013_seed1.yaml
+[2026-03-26 02:35:09] ✓ [任务 13] 完成 | seed=3 | (419.5s)
+[2026-03-26 02:35:09] 
+[任务 15] 开始 | seed=1 | Peanut butter jar with white cap, white ...
+[2026-03-26 02:35:09] 配置文件：editing_config_batch/0baad2ab0df5463fa55a4b03ba9caa09/0baad2ab0df5463fa55a4b03ba9caa09_seed3_prompt_1_base_w3_yizhi0507_adain_first_batch014_seed1.yaml
+[2026-03-26 02:35:21] ✓ [任务 14] 完成 | seed=1 | (423.7s)
+[2026-03-26 02:35:21] 
+[任务 16] 开始 | seed=3 | Peanut butter jar with white cap, white ...
+[2026-03-26 02:35:21] 配置文件：editing_config_batch/0baad2ab0df5463fa55a4b03ba9caa09/0baad2ab0df5463fa55a4b03ba9caa09_seed3_prompt_1_base_w3_yizhi0507_adain_first_batch015_seed3.yaml
+[2026-03-26 02:42:05] ✓ [任务 15] 完成 | seed=1 | (415.6s)
+[2026-03-26 02:42:05] 
+[任务 17] 开始 | seed=3 | Peanut butter jar with brown cap, brown ...
+[2026-03-26 02:42:05] 配置文件：editing_config_batch/0baad2ab0df5463fa55a4b03ba9caa09/0baad2ab0df5463fa55a4b03ba9caa09_seed3_prompt_1_base_w3_yizhi0507_adain_first_batch016_seed3.yaml
+[2026-03-26 02:42:22] ✓ [任务 16] 完成 | seed=3 | (421.0s)
+[2026-03-26 02:42:22] 
+[任务 18] 开始 | seed=1 | Peanut butter jar with brown cap, brown ...
+[2026-03-26 02:42:22] 配置文件：editing_config_batch/0baad2ab0df5463fa55a4b03ba9caa09/0baad2ab0df5463fa55a4b03ba9caa09_seed3_prompt_1_base_w3_yizhi0507_adain_first_batch017_seed1.yaml
+[2026-03-26 02:48:52] ✓ [任务 17] 完成 | seed=3 | (407.3s)
+[2026-03-26 02:48:52] 
+[任务 19] 开始 | seed=3 | Peanut butter jar with grey cap, grey la...
+[2026-03-26 02:48:52] 配置文件：editing_config_batch/0baad2ab0df5463fa55a4b03ba9caa09/0baad2ab0df5463fa55a4b03ba9caa09_seed3_prompt_1_base_w3_yizhi0507_adain_first_batch018_seed3.yaml
+[2026-03-26 02:49:15] ✓ [任务 18] 完成 | seed=1 | (413.0s)
+[2026-03-26 02:49:15] 
+[任务 20] 开始 | seed=1 | Peanut butter jar with grey cap, grey la...
+[2026-03-26 02:49:15] 配置文件：editing_config_batch/0baad2ab0df5463fa55a4b03ba9caa09/0baad2ab0df5463fa55a4b03ba9caa09_seed3_prompt_1_base_w3_yizhi0507_adain_first_batch019_seed1.yaml
+[2026-03-26 02:55:32] ✓ [任务 19] 完成 | seed=3 | (399.8s)
+[2026-03-26 02:55:32] 
+[任务 21] 开始 | seed=1 | Peanut butter jar with cyan cap, cyan la...
+[2026-03-26 02:55:32] 配置文件：editing_config_batch/0baad2ab0df5463fa55a4b03ba9caa09/0baad2ab0df5463fa55a4b03ba9caa09_seed3_prompt_1_base_w3_yizhi0507_adain_first_batch020_seed1.yaml
+[2026-03-26 02:56:07] ✓ [任务 20] 完成 | seed=1 | (411.9s)
+[2026-03-26 02:56:07] 
+[任务 22] 开始 | seed=3 | Peanut butter jar with cyan cap, cyan la...
+[2026-03-26 02:56:07] 配置文件：editing_config_batch/0baad2ab0df5463fa55a4b03ba9caa09/0baad2ab0df5463fa55a4b03ba9caa09_seed3_prompt_1_base_w3_yizhi0507_adain_first_batch021_seed3.yaml
+[2026-03-26 03:02:21] ✓ [任务 21] 完成 | seed=1 | (409.5s)
+[2026-03-26 03:02:21] 
+[任务 23] 开始 | seed=1 | Peanut butter jar with magenta cap, mage...
+[2026-03-26 03:02:21] 配置文件：editing_config_batch/0baad2ab0df5463fa55a4b03ba9caa09/0baad2ab0df5463fa55a4b03ba9caa09_seed3_prompt_1_base_w3_yizhi0507_adain_first_batch022_seed1.yaml
+[2026-03-26 03:03:04] ✓ [任务 22] 完成 | seed=3 | (417.0s)
+[2026-03-26 03:03:04] 
+[任务 24] 开始 | seed=3 | Peanut butter jar with magenta cap, mage...
+[2026-03-26 03:03:04] 配置文件：editing_config_batch/0baad2ab0df5463fa55a4b03ba9caa09/0baad2ab0df5463fa55a4b03ba9caa09_seed3_prompt_1_base_w3_yizhi0507_adain_first_batch023_seed3.yaml
+[2026-03-26 03:09:20] ✓ [任务 23] 完成 | seed=1 | (419.0s)
+[2026-03-26 03:09:20] 
+[任务 25] 开始 | seed=1 | Peanut butter jar with navy blue cap, na...
+[2026-03-26 03:09:20] 配置文件：editing_config_batch/0baad2ab0df5463fa55a4b03ba9caa09/0baad2ab0df5463fa55a4b03ba9caa09_seed3_prompt_1_base_w3_yizhi0507_adain_first_batch024_seed1.yaml
+[2026-03-26 03:09:53] ✓ [任务 24] 完成 | seed=3 | (409.3s)
+[2026-03-26 03:09:53] 
+[任务 26] 开始 | seed=3 | Peanut butter jar with navy blue cap, na...
+[2026-03-26 03:09:53] 配置文件：editing_config_batch/0baad2ab0df5463fa55a4b03ba9caa09/0baad2ab0df5463fa55a4b03ba9caa09_seed3_prompt_1_base_w3_yizhi0507_adain_first_batch025_seed3.yaml
+[2026-03-26 03:16:12] ✓ [任务 25] 完成 | seed=1 | (412.2s)
+[2026-03-26 03:16:12] 
+[任务 27] 开始 | seed=3 | Peanut butter jar with burgundy cap, bur...
+[2026-03-26 03:16:12] 配置文件：editing_config_batch/0baad2ab0df5463fa55a4b03ba9caa09/0baad2ab0df5463fa55a4b03ba9caa09_seed3_prompt_1_base_w3_yizhi0507_adain_first_batch026_seed3.yaml
+[2026-03-26 03:16:34] ✓ [任务 26] 完成 | seed=3 | (401.2s)
+[2026-03-26 03:16:34] 
+[任务 28] 开始 | seed=1 | Peanut butter jar with burgundy cap, bur...
+[2026-03-26 03:16:34] 配置文件：editing_config_batch/0baad2ab0df5463fa55a4b03ba9caa09/0baad2ab0df5463fa55a4b03ba9caa09_seed3_prompt_1_base_w3_yizhi0507_adain_first_batch027_seed1.yaml
+[2026-03-26 03:23:02] ✓ [任务 27] 完成 | seed=3 | (409.1s)
+[2026-03-26 03:23:02] 
+[任务 29] 开始 | seed=3 | Peanut butter jar with forest green cap,...
+[2026-03-26 03:23:02] 配置文件：editing_config_batch/0baad2ab0df5463fa55a4b03ba9caa09/0baad2ab0df5463fa55a4b03ba9caa09_seed3_prompt_1_base_w3_yizhi0507_adain_first_batch028_seed3.yaml
+[2026-03-26 03:23:27] ✓ [任务 28] 完成 | seed=1 | (413.0s)
+[2026-03-26 03:23:27] 
+[任务 30] 开始 | seed=1 | Peanut butter jar with forest green cap,...
+[2026-03-26 03:23:27] 配置文件：editing_config_batch/0baad2ab0df5463fa55a4b03ba9caa09/0baad2ab0df5463fa55a4b03ba9caa09_seed3_prompt_1_base_w3_yizhi0507_adain_first_batch029_seed1.yaml
+[2026-03-26 03:29:55] ✓ [任务 29] 完成 | seed=3 | (413.9s)
+[2026-03-26 03:29:55] 
+[任务 31] 开始 | seed=3 | Peanut butter jar with plum cap, plum la...
+[2026-03-26 03:29:55] 配置文件：editing_config_batch/0baad2ab0df5463fa55a4b03ba9caa09/0baad2ab0df5463fa55a4b03ba9caa09_seed3_prompt_1_base_w3_yizhi0507_adain_first_batch030_seed3.yaml
+[2026-03-26 03:30:25] ✓ [任务 30] 完成 | seed=1 | (417.9s)
+[2026-03-26 03:30:25] 
+[任务 32] 开始 | seed=1 | Peanut butter jar with plum cap, plum la...
+[2026-03-26 03:30:25] 配置文件：editing_config_batch/0baad2ab0df5463fa55a4b03ba9caa09/0baad2ab0df5463fa55a4b03ba9caa09_seed3_prompt_1_base_w3_yizhi0507_adain_first_batch031_seed1.yaml
+[2026-03-26 03:36:49] ✓ [任务 31] 完成 | seed=3 | (413.9s)
+[2026-03-26 03:36:49] 
+[任务 33] 开始 | seed=3 | Peanut butter jar with mustard cap, must...
+[2026-03-26 03:36:49] 配置文件：editing_config_batch/0baad2ab0df5463fa55a4b03ba9caa09/0baad2ab0df5463fa55a4b03ba9caa09_seed3_prompt_1_base_w3_yizhi0507_adain_first_batch032_seed3.yaml
+[2026-03-26 03:37:11] ✓ [任务 32] 完成 | seed=1 | (405.6s)
+[2026-03-26 03:37:11] 
+[任务 34] 开始 | seed=1 | Peanut butter jar with mustard cap, must...
+[2026-03-26 03:37:11] 配置文件：editing_config_batch/0baad2ab0df5463fa55a4b03ba9caa09/0baad2ab0df5463fa55a4b03ba9caa09_seed3_prompt_1_base_w3_yizhi0507_adain_first_batch033_seed1.yaml
+[2026-03-26 03:43:41] ✓ [任务 33] 完成 | seed=3 | (411.4s)
+[2026-03-26 03:43:41] 
+[任务 35] 开始 | seed=1 | Peanut butter jar with olive green cap, ...
+[2026-03-26 03:43:41] 配置文件：editing_config_batch/0baad2ab0df5463fa55a4b03ba9caa09/0baad2ab0df5463fa55a4b03ba9caa09_seed3_prompt_1_base_w3_yizhi0507_adain_first_batch034_seed1.yaml
+[2026-03-26 03:44:00] ✓ [任务 34] 完成 | seed=1 | (409.5s)
+[2026-03-26 03:44:00] 
+[任务 36] 开始 | seed=3 | Peanut butter jar with olive green cap, ...
+[2026-03-26 03:44:00] 配置文件：editing_config_batch/0baad2ab0df5463fa55a4b03ba9caa09/0baad2ab0df5463fa55a4b03ba9caa09_seed3_prompt_1_base_w3_yizhi0507_adain_first_batch035_seed3.yaml
+[2026-03-26 03:50:31] ✓ [任务 35] 完成 | seed=1 | (409.8s)
+[2026-03-26 03:50:31] 
+[任务 37] 开始 | seed=1 | Peanut butter jar with charcoal cap, cha...
+[2026-03-26 03:50:31] 配置文件：editing_config_batch/0baad2ab0df5463fa55a4b03ba9caa09/0baad2ab0df5463fa55a4b03ba9caa09_seed3_prompt_1_base_w3_yizhi0507_adain_first_batch036_seed1.yaml
+[2026-03-26 03:50:58] ✓ [任务 36] 完成 | seed=3 | (418.2s)
+[2026-03-26 03:50:58] 
+[任务 38] 开始 | seed=3 | Peanut butter jar with charcoal cap, cha...
+[2026-03-26 03:50:58] 配置文件：editing_config_batch/0baad2ab0df5463fa55a4b03ba9caa09/0baad2ab0df5463fa55a4b03ba9caa09_seed3_prompt_1_base_w3_yizhi0507_adain_first_batch037_seed3.yaml
+[2026-03-26 03:57:25] ✓ [任务 37] 完成 | seed=1 | (414.5s)
+[2026-03-26 03:57:25] 
+[任务 39] 开始 | seed=1 | Peanut butter jar with maroon cap, maroo...
+[2026-03-26 03:57:25] 配置文件：editing_config_batch/0baad2ab0df5463fa55a4b03ba9caa09/0baad2ab0df5463fa55a4b03ba9caa09_seed3_prompt_1_base_w3_yizhi0507_adain_first_batch038_seed1.yaml
+[2026-03-26 03:57:54] ✓ [任务 38] 完成 | seed=3 | (415.8s)
+[2026-03-26 03:57:54] 
+[任务 40] 开始 | seed=3 | Peanut butter jar with maroon cap, maroo...
+[2026-03-26 03:57:54] 配置文件：editing_config_batch/0baad2ab0df5463fa55a4b03ba9caa09/0baad2ab0df5463fa55a4b03ba9caa09_seed3_prompt_1_base_w3_yizhi0507_adain_first_batch039_seed3.yaml
+[2026-03-26 04:04:09] ✓ [任务 39] 完成 | seed=1 | (403.7s)
+[2026-03-26 04:04:09] 
+[任务 41] 开始 | seed=1 | Peanut butter jar with baby blue cap, ba...
+[2026-03-26 04:04:09] 配置文件：editing_config_batch/0baad2ab0df5463fa55a4b03ba9caa09/0baad2ab0df5463fa55a4b03ba9caa09_seed3_prompt_1_base_w3_yizhi0507_adain_first_batch040_seed1.yaml
+[2026-03-26 04:04:44] ✓ [任务 40] 完成 | seed=3 | (409.6s)
+[2026-03-26 04:04:44] 
+[任务 42] 开始 | seed=3 | Peanut butter jar with baby blue cap, ba...
+[2026-03-26 04:04:44] 配置文件：editing_config_batch/0baad2ab0df5463fa55a4b03ba9caa09/0baad2ab0df5463fa55a4b03ba9caa09_seed3_prompt_1_base_w3_yizhi0507_adain_first_batch041_seed3.yaml
+[2026-03-26 04:10:58] ✓ [任务 41] 完成 | seed=1 | (409.4s)
+[2026-03-26 04:10:58] 
+[任务 43] 开始 | seed=1 | Peanut butter jar with mint green cap, m...
+[2026-03-26 04:10:58] 配置文件：editing_config_batch/0baad2ab0df5463fa55a4b03ba9caa09/0baad2ab0df5463fa55a4b03ba9caa09_seed3_prompt_1_base_w3_yizhi0507_adain_first_batch042_seed1.yaml
+[2026-03-26 04:11:25] ✓ [任务 42] 完成 | seed=3 | (401.4s)
+[2026-03-26 04:11:25] 
+[任务 44] 开始 | seed=3 | Peanut butter jar with mint green cap, m...
+[2026-03-26 04:11:25] 配置文件：editing_config_batch/0baad2ab0df5463fa55a4b03ba9caa09/0baad2ab0df5463fa55a4b03ba9caa09_seed3_prompt_1_base_w3_yizhi0507_adain_first_batch043_seed3.yaml
+[2026-03-26 04:17:49] ✓ [任务 43] 完成 | seed=1 | (410.7s)
+[2026-03-26 04:17:49] 
+[任务 45] 开始 | seed=1 | Peanut butter jar with lavender cap, lav...
+[2026-03-26 04:17:49] 配置文件：editing_config_batch/0baad2ab0df5463fa55a4b03ba9caa09/0baad2ab0df5463fa55a4b03ba9caa09_seed3_prompt_1_base_w3_yizhi0507_adain_first_batch044_seed1.yaml
+[2026-03-26 04:18:23] ✓ [任务 44] 完成 | seed=3 | (417.9s)
+[2026-03-26 04:18:23] 
+[任务 46] 开始 | seed=3 | Peanut butter jar with lavender cap, lav...
+[2026-03-26 04:18:23] 配置文件：editing_config_batch/0baad2ab0df5463fa55a4b03ba9caa09/0baad2ab0df5463fa55a4b03ba9caa09_seed3_prompt_1_base_w3_yizhi0507_adain_first_batch045_seed3.yaml
+[2026-03-26 04:24:45] ✓ [任务 45] 完成 | seed=1 | (415.8s)
+[2026-03-26 04:24:45] 
+[任务 47] 开始 | seed=3 | Peanut butter jar with peach cap, peach ...
+[2026-03-26 04:24:45] 配置文件：editing_config_batch/0baad2ab0df5463fa55a4b03ba9caa09/0baad2ab0df5463fa55a4b03ba9caa09_seed3_prompt_1_base_w3_yizhi0507_adain_first_batch046_seed3.yaml
+[2026-03-26 04:25:18] ✓ [任务 46] 完成 | seed=3 | (414.7s)
+[2026-03-26 04:25:18] 
+[任务 48] 开始 | seed=1 | Peanut butter jar with peach cap, peach ...
+[2026-03-26 04:25:18] 配置文件：editing_config_batch/0baad2ab0df5463fa55a4b03ba9caa09/0baad2ab0df5463fa55a4b03ba9caa09_seed3_prompt_1_base_w3_yizhi0507_adain_first_batch047_seed1.yaml
+[2026-03-26 04:31:27] ✓ [任务 47] 完成 | seed=3 | (402.4s)
+[2026-03-26 04:31:27] 
+[任务 49] 开始 | seed=3 | Peanut butter jar with coral cap, coral ...
+[2026-03-26 04:31:27] 配置文件：editing_config_batch/0baad2ab0df5463fa55a4b03ba9caa09/0baad2ab0df5463fa55a4b03ba9caa09_seed3_prompt_1_base_w3_yizhi0507_adain_first_batch048_seed3.yaml
+[2026-03-26 04:32:09] ✓ [任务 48] 完成 | seed=1 | (411.7s)
+[2026-03-26 04:32:09] 
+[任务 50] 开始 | seed=1 | Peanut butter jar with coral cap, coral ...
+[2026-03-26 04:32:09] 配置文件：editing_config_batch/0baad2ab0df5463fa55a4b03ba9caa09/0baad2ab0df5463fa55a4b03ba9caa09_seed3_prompt_1_base_w3_yizhi0507_adain_first_batch049_seed1.yaml
+[2026-03-26 04:38:17] ✓ [任务 49] 完成 | seed=3 | (410.2s)
+[2026-03-26 04:38:17] 
+[任务 51] 开始 | seed=1 | Peanut butter jar with blush pink cap, b...
+[2026-03-26 04:38:17] 配置文件：editing_config_batch/0baad2ab0df5463fa55a4b03ba9caa09/0baad2ab0df5463fa55a4b03ba9caa09_seed3_prompt_1_base_w3_yizhi0507_adain_first_batch050_seed1.yaml
+[2026-03-26 04:38:52] ✓ [任务 50] 完成 | seed=1 | (402.3s)
+[2026-03-26 04:38:52] 
+[任务 52] 开始 | seed=3 | Peanut butter jar with blush pink cap, b...
+[2026-03-26 04:38:52] 配置文件：editing_config_batch/0baad2ab0df5463fa55a4b03ba9caa09/0baad2ab0df5463fa55a4b03ba9caa09_seed3_prompt_1_base_w3_yizhi0507_adain_first_batch051_seed3.yaml
+[2026-03-26 04:45:02] ✓ [任务 51] 完成 | seed=1 | (405.0s)
+[2026-03-26 04:45:02] 
+[任务 53] 开始 | seed=1 | Peanut butter jar with pale yellow cap, ...
+[2026-03-26 04:45:02] 配置文件：editing_config_batch/0baad2ab0df5463fa55a4b03ba9caa09/0baad2ab0df5463fa55a4b03ba9caa09_seed3_prompt_1_base_w3_yizhi0507_adain_first_batch052_seed1.yaml
+[2026-03-26 04:45:48] ✓ [任务 52] 完成 | seed=3 | (415.8s)
+[2026-03-26 04:45:48] 
+[任务 54] 开始 | seed=3 | Peanut butter jar with pale yellow cap, ...
+[2026-03-26 04:45:48] 配置文件：editing_config_batch/0baad2ab0df5463fa55a4b03ba9caa09/0baad2ab0df5463fa55a4b03ba9caa09_seed3_prompt_1_base_w3_yizhi0507_adain_first_batch053_seed3.yaml

@@ -48,15 +48,15 @@ adain_early: false
 adain_time: 0.3
 mesh: /root/autodl-tmp/bishetest/0baad2ab0df5463fa55a4b03ba9caa09/glb/0baad2ab0df5463fa55a4b03ba9caa09.obj
 segment_img_path: /root/autodl-tmp/bishetest/0baad2ab0df5463fa55a4b03ba9caa09/segment_6views_render/0baad2ab0df5463fa55a4b03ba9caa09_segment_6views_modify_render_concat.png
-prompt: '"Peanut butter jar with green cap, red label, Peter Pan, promo, 16 oz, glossy"'
+prompt: '"Peanut butter jar with white cap, red label, Peter Pan, promo, 16 oz, glossy"'
 face2label_path: ''
 seed: 3
 gpu_id: 0
 guidance_scale: 7.5
 ref_attention_end: 0.2
-late_use_adjacent_baseline: true
+late_use_adjacent_baseline: false
 late_use_adjacent_segment: false
-early_use_adjacent_baseline: true
+early_use_adjacent_baseline: false
 early_use_adjacent_segment: false
 early_segment_weight: 3.0
 late_segment_weight: 3.0
@@ -66,3 +66,5 @@ yizhi_end: 0.7
 
 painted_views: /root/autodl-tmp/part-aware-text-guided-texture/exp/gd7_5_adain_yizhi_0_5_3_0_norefattn_full_design/result/0baad2ab0df5463fa55a4b03ba9caa09/early_adj_late_adj/denoise_time_0.2/Yizhi_0.5_0.7/seed_3/04Mar2026-053147/gs_7.5/results/after_component5_inpaint/results/after_inpainting/inpaint_textured_views_rgb.jpg
 painted_mask: /root/autodl-tmp/editing_mask_handle/0baad2ab0df5463fa55a4b03ba9caa09_segment_6views_modify_render_concat_mask.png
+do_highres_fix: true
+highres_blur_kernel: 11

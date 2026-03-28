@@ -36,7 +36,51 @@ TASKS_CONFIG = {
     # "inpaint_data/user_study/aa1a732d4fdc44e0a20cee312a929d77":"aa1a732d4fdc44e0a20cee312a929d77",
     # "inpaint_data/user_study/1bb0cf7261174670ad1134093875e1d1":"1bb0cf7261174670ad1134093875e1d1",
     # "inpaint_data/user_study/77d56cc994f94d8280c38009688e7413":"77d56cc994f94d8280c38009688e7413"
-    "inpaint_data/xin_buquan_test/": "0a505cc6635745edbcf9476b65402a53"
+    "inpaint_data/texture_editing/group_1/green/ours": "0baad2ab0df5463fa55a4b03ba9caa09",
+    "inpaint_data/texture_editing/group_1/green/xiaorong": "0baad2ab0df5463fa55a4b03ba9caa09",
+    "inpaint_data/texture_editing/group_1/marron": "0baad2ab0df5463fa55a4b03ba9caa09", 
+    "inpaint_data/texture_editing/group_1/red": "0baad2ab0df5463fa55a4b03ba9caa09",    
+    "inpaint_data/texture_editing/group_1/yellow": "0baad2ab0df5463fa55a4b03ba9caa09",
+
+    "inpaint_data/texture_editing/group_2/leaf_ours": "0baad2ab0df5463fa55a4b03ba9caa09",
+    "inpaint_data/texture_editing/group_2/leaf_10_5_xiaorong_1": "0baad2ab0df5463fa55a4b03ba9caa09",
+    "inpaint_data/texture_editing/group_2/dot_pattern/ours": "0baad2ab0df5463fa55a4b03ba9caa09",
+    "inpaint_data/texture_editing/group_2/line_pattern/ours": "0baad2ab0df5463fa55a4b03ba9caa09",
+    "inpaint_data/texture_editing/group_2/26Mar2026-105110_flower": "0baad2ab0df5463fa55a4b03ba9caa09",    
+
+    "inpaint_data/texture_editing/group_3/04Mar2026-060600_原图": "314d5728e6ac496abdf1fe7268ca9ae0",
+    "inpaint_data/texture_editing/group_3/26Mar2026-120823_石灰岩": "314d5728e6ac496abdf1fe7268ca9ae0",
+    "inpaint_data/texture_editing/group_3/26Mar2026-121329_砂岩": "314d5728e6ac496abdf1fe7268ca9ae0",
+    "inpaint_data/texture_editing/group_3/26Mar2026-122334_大理石": "314d5728e6ac496abdf1fe7268ca9ae0", 
+    "inpaint_data/texture_editing/group_3/26Mar2026-122724_大理石2": "314d5728e6ac496abdf1fe7268ca9ae0",
+
+
+    # noadj
+    "inpaint_data/rebuttal/adj/61ec1aa136b74edda418c3104fdb08ab/full_design": "61ec1aa136b74edda418c3104fdb08ab",
+    "inpaint_data/rebuttal/adj/61ec1aa136b74edda418c3104fdb08ab/no_adj": "61ec1aa136b74edda418c3104fdb08ab",
+    "inpaint_data/rebuttal/adj/90ef7d25938d4855b57794ba7e3420cd/full_design": "90ef7d25938d4855b57794ba7e3420cd", 
+    "inpaint_data/rebuttal/adj/90ef7d25938d4855b57794ba7e3420cd/no_adj": "90ef7d25938d4855b57794ba7e3420cd",    
+    "inpaint_data/rebuttal/adj/4078e7e485ab48ad86e121d771c1d07a/full_design": "4078e7e485ab48ad86e121d771c1d07a",
+    "inpaint_data/rebuttal/adj/4078e7e485ab48ad86e121d771c1d07a/no_adj": "4078e7e485ab48ad86e121d771c1d07a",
+
+    "inpaint_data/rebuttal/adj/27b5263cee8f451c98474758a6d779f2/seed1/full_design": "27b5263cee8f451c98474758a6d779f2",
+    "inpaint_data/rebuttal/adj/27b5263cee8f451c98474758a6d779f2/seed1/no_adj": "27b5263cee8f451c98474758a6d779f2",
+    "inpaint_data/rebuttal/adj/27b5263cee8f451c98474758a6d779f2/seed3/full_design": "27b5263cee8f451c98474758a6d779f2",
+    "inpaint_data/rebuttal/adj/27b5263cee8f451c98474758a6d779f2/seed3/no_adj": "27b5263cee8f451c98474758a6d779f2",
+
+
+    # no adain
+    "inpaint_data/rebuttal/no_adain/1bb0cf7261174670ad1134093875e1d1/full_design": "1bb0cf7261174670ad1134093875e1d1",
+    "inpaint_data/rebuttal/no_adain/1bb0cf7261174670ad1134093875e1d1/no_adain": "1bb0cf7261174670ad1134093875e1d1",
+    "inpaint_data/rebuttal/no_adain/4c4cfe66151741ef91d85211d416753b/full_design": "4c4cfe66151741ef91d85211d416753b", 
+    "inpaint_data/rebuttal/no_adain/4c4cfe66151741ef91d85211d416753b/no_adain": "4c4cfe66151741ef91d85211d416753b",    
+    "inpaint_data/rebuttal/no_adain/43a3cc69312948dc8d72ac0eaeecfc0a/full_design": "43a3cc69312948dc8d72ac0eaeecfc0a",
+    "inpaint_data/rebuttal/no_adain/43a3cc69312948dc8d72ac0eaeecfc0a/no_adain": "43a3cc69312948dc8d72ac0eaeecfc0a",
+    "inpaint_data/rebuttal/no_adain/90789cdc08724e39b5bb3c70d6262c7a/full_design": "90789cdc08724e39b5bb3c70d6262c7a",
+    "inpaint_data/rebuttal/no_adain/90789cdc08724e39b5bb3c70d6262c7a/no_adain": "90789cdc08724e39b5bb3c70d6262c7a",
+    "inpaint_data/rebuttal/no_adain/cffd007512a74a47b48390e1777c2afa_house/full_design": "cffd007512a74a47b48390e1777c2afa",
+    "inpaint_data/rebuttal/no_adain/cffd007512a74a47b48390e1777c2afa_house/no_adain": "cffd007512a74a47b48390e1777c2afa",
+
 }
 
 DEFAULT_LABELS_DIR = "../bishetest"
@@ -59,13 +103,13 @@ def load_base_config(config_path):
         "mesh_transform": {"scale": 2.0},
         "mesh_autouv": False,
         "texture_path": "",
-        "camera_azims": [0, 180],
-        "camera_elev": [0, 0],
+        "camera_azims": [0, 60, 120, 180, 240, 300],
+        "camera_elev": [0, 0, 0, 0, 0, 0],
         "camera_centers": None,
         "texture_size": 1024,
         "render_rgb_size": 1024,
         "texture_rgb_size": 1024,
-        "inpainting_method": "component6",
+        "inpainting_method": "component5",
         "face2label_path": None, 
         "output_dir": "",
         "log_interval": 10,
@@ -119,7 +163,7 @@ def gpu_worker(gpu_id, task_queue, base_config, labels_dir, lock, log_file, obj_
         # ==================== 任务处理逻辑 ====================
         mesh_path = os.path.join(result_dir, obj_name)
         texture_path = os.path.join(result_dir, png_name)
-        output_dir = os.path.join(result_dir, "after_component5_inpaint")
+        output_dir = os.path.join(result_dir, "after_component5_inpaint_0_25")
         
         if not (os.path.exists(mesh_path) and os.path.exists(texture_path)):
             print(f"[Worker GPU {gpu_id}] 跳过无效目录: {result_dir}")

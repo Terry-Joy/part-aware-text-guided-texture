@@ -1,0 +1,347 @@
+[2026-03-26 01:34:00] ======================================================================
+[2026-03-26 01:34:00] 批量任务启动 | Prompts: 50 | Seeds/Prompt: 2
+[2026-03-26 01:34:00] 总任务数：100 | 待运行：100 | 并行：2
+[2026-03-26 01:34:00] ======================================================================
+[2026-03-26 01:34:01] 
+已生成 100 个配置文件
+[2026-03-26 01:34:01] ======================================================================
+[2026-03-26 01:34:01] 开始执行任务...
+[2026-03-26 01:34:01] ======================================================================
+[2026-03-26 01:34:01] 
+[任务 1] 开始 | seed=4032 | Brown vase with subtle grain pattern...
+[2026-03-26 01:34:01] 
+[任务 2] 开始 | seed=2345 | Brown vase with subtle grain pattern...
+[2026-03-26 01:34:01] 配置文件：editing_config_batch/0a505cc6635745edbcf9476b65402a53/0a505cc6635745edbcf9476b65402a53_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch001_seed2345.yaml
+[2026-03-26 01:34:01] 配置文件：editing_config_batch/0a505cc6635745edbcf9476b65402a53/0a505cc6635745edbcf9476b65402a53_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch000_seed4032.yaml
+[2026-03-26 01:34:07] ✗ [任务 1] 失败 | seed=4032 | (6.1s)
+[2026-03-26 01:34:07] 
+[任务 3] 开始 | seed=3841 | Brown vase with faint speckle texture...
+[2026-03-26 01:34:07] 配置文件：editing_config_batch/0a505cc6635745edbcf9476b65402a53/0a505cc6635745edbcf9476b65402a53_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch002_seed3841.yaml
+[2026-03-26 01:34:07] ✗ [任务 2] 失败 | seed=2345 | (6.2s)
+[2026-03-26 01:34:07] 
+[任务 4] 开始 | seed=5123 | Brown vase with faint speckle texture...
+[2026-03-26 01:34:07] 配置文件：editing_config_batch/0a505cc6635745edbcf9476b65402a53/0a505cc6635745edbcf9476b65402a53_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch003_seed5123.yaml
+[2026-03-26 01:35:02] ======================================================================
+[2026-03-26 01:35:02] 批量任务启动 | Prompts: 50 | Seeds/Prompt: 2
+[2026-03-26 01:35:02] 总任务数：100 | 待运行：100 | 并行：2
+[2026-03-26 01:35:02] GPU: 0 | OMP_THREADS: 1
+[2026-03-26 01:35:02] ======================================================================
+[2026-03-26 01:35:03] 
+已生成 100 个配置文件
+[2026-03-26 01:35:03] ======================================================================
+[2026-03-26 01:35:03] 开始执行任务...
+[2026-03-26 01:35:03] ======================================================================
+[2026-03-26 01:35:03] 
+[任务 1] 开始 | seed=708 | Brown vase with subtle grain pattern...
+[2026-03-26 01:35:03] 配置文件：editing_config_batch/0a505cc6635745edbcf9476b65402a53/0a505cc6635745edbcf9476b65402a53_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch000_seed708.yaml
+[2026-03-26 01:35:03] 
+[任务 2] 开始 | seed=3462 | Brown vase with subtle grain pattern...
+[2026-03-26 01:35:03] 配置文件：editing_config_batch/0a505cc6635745edbcf9476b65402a53/0a505cc6635745edbcf9476b65402a53_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch001_seed3462.yaml
+[2026-03-26 01:37:45] ======================================================================
+[2026-03-26 01:37:45] 批量任务启动 | Prompts: 50 | Seeds/Prompt: 2
+[2026-03-26 01:37:45] 总任务数：100 | 待运行：100 | 并行：2
+[2026-03-26 01:37:45] GPU: 0 | OMP_THREADS: 1
+[2026-03-26 01:37:45] ======================================================================
+[2026-03-26 01:37:46] 
+已生成 100 个配置文件
+[2026-03-26 01:37:46] ======================================================================
+[2026-03-26 01:37:46] 开始执行任务...
+[2026-03-26 01:37:46] ======================================================================
+[2026-03-26 01:37:46] 
+[任务 1] 开始 | seed=6014 | Brown vase with subtle grain pattern...
+[2026-03-26 01:37:46] 
+[任务 2] 开始 | seed=2801 | Brown vase with subtle grain pattern...
+[2026-03-26 01:37:46] 配置文件：editing_config_batch/0a505cc6635745edbcf9476b65402a53/0a505cc6635745edbcf9476b65402a53_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch000_seed6014.yaml
+[2026-03-26 01:37:46] 配置文件：editing_config_batch/0a505cc6635745edbcf9476b65402a53/0a505cc6635745edbcf9476b65402a53_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch001_seed2801.yaml
+[2026-03-26 01:40:17] ✓ [任务 2] 完成 | seed=2801 | (150.6s)
+[2026-03-26 01:40:17] 
+[任务 3] 开始 | seed=7291 | Brown vase with faint speckle texture...
+[2026-03-26 01:40:17] 配置文件：editing_config_batch/0a505cc6635745edbcf9476b65402a53/0a505cc6635745edbcf9476b65402a53_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch002_seed7291.yaml
+[2026-03-26 01:40:32] ✓ [任务 1] 完成 | seed=6014 | (166.1s)
+[2026-03-26 01:40:32] 
+[任务 4] 开始 | seed=6274 | Brown vase with faint speckle texture...
+[2026-03-26 01:40:32] 配置文件：editing_config_batch/0a505cc6635745edbcf9476b65402a53/0a505cc6635745edbcf9476b65402a53_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch003_seed6274.yaml
+[2026-03-26 01:42:54] ✓ [任务 3] 完成 | seed=7291 | (157.6s)
+[2026-03-26 01:42:54] 
+[任务 5] 开始 | seed=7012 | Brown vase with micro noise pattern...
+[2026-03-26 01:42:54] 配置文件：editing_config_batch/0a505cc6635745edbcf9476b65402a53/0a505cc6635745edbcf9476b65402a53_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch004_seed7012.yaml
+[2026-03-26 01:43:12] ✓ [任务 4] 完成 | seed=6274 | (160.0s)
+[2026-03-26 01:43:12] 
+[任务 6] 开始 | seed=3301 | Brown vase with micro noise pattern...
+[2026-03-26 01:43:12] 配置文件：editing_config_batch/0a505cc6635745edbcf9476b65402a53/0a505cc6635745edbcf9476b65402a53_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch005_seed3301.yaml
+[2026-03-26 01:45:26] ✓ [任务 5] 完成 | seed=7012 | (151.5s)
+[2026-03-26 01:45:26] 
+[任务 7] 开始 | seed=5503 | Brown vase with soft matte texture...
+[2026-03-26 01:45:26] 配置文件：editing_config_batch/0a505cc6635745edbcf9476b65402a53/0a505cc6635745edbcf9476b65402a53_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch006_seed5503.yaml
+[2026-03-26 01:45:49] ✓ [任务 6] 完成 | seed=3301 | (156.7s)
+[2026-03-26 01:45:49] 
+[任务 8] 开始 | seed=8168 | Brown vase with soft matte texture...
+[2026-03-26 01:45:49] 配置文件：editing_config_batch/0a505cc6635745edbcf9476b65402a53/0a505cc6635745edbcf9476b65402a53_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch007_seed8168.yaml
+[2026-03-26 01:48:48] ✓ [任务 7] 完成 | seed=5503 | (202.2s)
+[2026-03-26 01:48:48] 
+[任务 9] 开始 | seed=9430 | Brown vase with delicate rough surface...
+[2026-03-26 01:48:48] 配置文件：editing_config_batch/0a505cc6635745edbcf9476b65402a53/0a505cc6635745edbcf9476b65402a53_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch008_seed9430.yaml
+[2026-03-26 01:50:36] ✓ [任务 8] 完成 | seed=8168 | (287.5s)
+[2026-03-26 01:50:36] 
+[任务 10] 开始 | seed=8251 | Brown vase with delicate rough surface...
+[2026-03-26 01:50:36] 配置文件：editing_config_batch/0a505cc6635745edbcf9476b65402a53/0a505cc6635745edbcf9476b65402a53_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch009_seed8251.yaml
+[2026-03-26 01:54:05] ✓ [任务 9] 完成 | seed=9430 | (317.5s)
+[2026-03-26 01:54:05] 
+[任务 11] 开始 | seed=6889 | Brown vase with fine sand texture...
+[2026-03-26 01:54:05] 配置文件：editing_config_batch/0a505cc6635745edbcf9476b65402a53/0a505cc6635745edbcf9476b65402a53_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch010_seed6889.yaml
+[2026-03-26 01:55:55] ✓ [任务 10] 完成 | seed=8251 | (318.6s)
+[2026-03-26 01:55:55] 
+[任务 12] 开始 | seed=9481 | Brown vase with fine sand texture...
+[2026-03-26 01:55:55] 配置文件：editing_config_batch/0a505cc6635745edbcf9476b65402a53/0a505cc6635745edbcf9476b65402a53_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch011_seed9481.yaml
+[2026-03-26 01:59:46] ✓ [任务 11] 完成 | seed=6889 | (341.0s)
+[2026-03-26 01:59:46] 
+[任务 13] 开始 | seed=5128 | Brown vase with subtle glaze variation...
+[2026-03-26 01:59:46] 配置文件：editing_config_batch/0a505cc6635745edbcf9476b65402a53/0a505cc6635745edbcf9476b65402a53_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch012_seed5128.yaml
+[2026-03-26 02:01:09] ✓ [任务 12] 完成 | seed=9481 | (314.3s)
+[2026-03-26 02:01:09] 
+[任务 14] 开始 | seed=6540 | Brown vase with subtle glaze variation...
+[2026-03-26 02:01:09] 配置文件：editing_config_batch/0a505cc6635745edbcf9476b65402a53/0a505cc6635745edbcf9476b65402a53_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch013_seed6540.yaml
+[2026-03-26 02:05:05] ✓ [任务 13] 完成 | seed=5128 | (318.6s)
+[2026-03-26 02:05:05] 
+[任务 15] 开始 | seed=4260 | Brown vase with faint ceramic grain...
+[2026-03-26 02:05:05] 配置文件：editing_config_batch/0a505cc6635745edbcf9476b65402a53/0a505cc6635745edbcf9476b65402a53_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch014_seed4260.yaml
+[2026-03-26 02:06:55] ✓ [任务 14] 完成 | seed=6540 | (346.2s)
+[2026-03-26 02:06:55] 
+[任务 16] 开始 | seed=3941 | Brown vase with faint ceramic grain...
+[2026-03-26 02:06:55] 配置文件：editing_config_batch/0a505cc6635745edbcf9476b65402a53/0a505cc6635745edbcf9476b65402a53_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch015_seed3941.yaml
+[2026-03-26 02:10:05] ✓ [任务 15] 完成 | seed=4260 | (300.0s)
+[2026-03-26 02:10:05] 
+[任务 17] 开始 | seed=5448 | Brown vase with minimal surface speckle...
+[2026-03-26 02:10:05] 配置文件：editing_config_batch/0a505cc6635745edbcf9476b65402a53/0a505cc6635745edbcf9476b65402a53_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch016_seed5448.yaml
+[2026-03-26 02:12:17] ✓ [任务 16] 完成 | seed=3941 | (321.2s)
+[2026-03-26 02:12:17] 
+[任务 18] 开始 | seed=1726 | Brown vase with minimal surface speckle...
+[2026-03-26 02:12:17] 配置文件：editing_config_batch/0a505cc6635745edbcf9476b65402a53/0a505cc6635745edbcf9476b65402a53_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch017_seed1726.yaml
+[2026-03-26 02:15:26] ✓ [任务 17] 完成 | seed=5448 | (321.2s)
+[2026-03-26 02:15:26] 
+[任务 19] 开始 | seed=1222 | Brown vase with soft powder texture...
+[2026-03-26 02:15:26] 配置文件：editing_config_batch/0a505cc6635745edbcf9476b65402a53/0a505cc6635745edbcf9476b65402a53_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch018_seed1222.yaml
+[2026-03-26 02:17:27] ✓ [任务 18] 完成 | seed=1726 | (310.3s)
+[2026-03-26 02:17:27] 
+[任务 20] 开始 | seed=788 | Brown vase with soft powder texture...
+[2026-03-26 02:17:27] 配置文件：editing_config_batch/0a505cc6635745edbcf9476b65402a53/0a505cc6635745edbcf9476b65402a53_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch019_seed788.yaml
+[2026-03-26 02:21:13] ✓ [任务 19] 完成 | seed=1222 | (346.8s)
+[2026-03-26 02:21:13] 
+[任务 21] 开始 | seed=3050 | Brown vase with delicate matte finish...
+[2026-03-26 02:21:13] 配置文件：editing_config_batch/0a505cc6635745edbcf9476b65402a53/0a505cc6635745edbcf9476b65402a53_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch020_seed3050.yaml
+[2026-03-26 02:22:14] ✓ [任务 20] 完成 | seed=788 | (287.4s)
+[2026-03-26 02:22:14] 
+[任务 22] 开始 | seed=6999 | Brown vase with delicate matte finish...
+[2026-03-26 02:22:14] 配置文件：editing_config_batch/0a505cc6635745edbcf9476b65402a53/0a505cc6635745edbcf9476b65402a53_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch021_seed6999.yaml
+[2026-03-26 02:26:40] ✓ [任务 21] 完成 | seed=3050 | (327.3s)
+[2026-03-26 02:26:40] 
+[任务 23] 开始 | seed=2986 | Brown vase with subtle texture noise...
+[2026-03-26 02:26:40] 配置文件：editing_config_batch/0a505cc6635745edbcf9476b65402a53/0a505cc6635745edbcf9476b65402a53_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch022_seed2986.yaml
+[2026-03-26 02:28:04] ✓ [任务 22] 完成 | seed=6999 | (349.4s)
+[2026-03-26 02:28:04] 
+[任务 24] 开始 | seed=5299 | Brown vase with subtle texture noise...
+[2026-03-26 02:28:04] 配置文件：editing_config_batch/0a505cc6635745edbcf9476b65402a53/0a505cc6635745edbcf9476b65402a53_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch023_seed5299.yaml
+[2026-03-26 02:31:23] ✓ [任务 23] 完成 | seed=2986 | (282.5s)
+[2026-03-26 02:31:23] 
+[任务 25] 开始 | seed=3568 | Brown vase with small polka dot pattern...
+[2026-03-26 02:31:23] 配置文件：editing_config_batch/0a505cc6635745edbcf9476b65402a53/0a505cc6635745edbcf9476b65402a53_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch024_seed3568.yaml
+[2026-03-26 02:33:30] ✓ [任务 24] 完成 | seed=5299 | (325.8s)
+[2026-03-26 02:33:30] 
+[任务 26] 开始 | seed=6853 | Brown vase with small polka dot pattern...
+[2026-03-26 02:33:30] 配置文件：editing_config_batch/0a505cc6635745edbcf9476b65402a53/0a505cc6635745edbcf9476b65402a53_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch025_seed6853.yaml
+[2026-03-26 02:36:40] ✓ [任务 25] 完成 | seed=3568 | (317.2s)
+[2026-03-26 02:36:40] 
+[任务 27] 开始 | seed=3377 | Brown vase with fine grid pattern...
+[2026-03-26 02:36:40] 配置文件：editing_config_batch/0a505cc6635745edbcf9476b65402a53/0a505cc6635745edbcf9476b65402a53_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch026_seed3377.yaml
+[2026-03-26 02:38:47] ✓ [任务 26] 完成 | seed=6853 | (317.0s)
+[2026-03-26 02:38:47] 
+[任务 28] 开始 | seed=1051 | Brown vase with fine grid pattern...
+[2026-03-26 02:38:47] 配置文件：editing_config_batch/0a505cc6635745edbcf9476b65402a53/0a505cc6635745edbcf9476b65402a53_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch027_seed1051.yaml
+[2026-03-26 02:42:20] ✓ [任务 27] 完成 | seed=3377 | (339.9s)
+[2026-03-26 02:42:20] 
+[任务 29] 开始 | seed=4812 | Brown vase with micro stripe pattern...
+[2026-03-26 02:42:20] 配置文件：editing_config_batch/0a505cc6635745edbcf9476b65402a53/0a505cc6635745edbcf9476b65402a53_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch028_seed4812.yaml
+[2026-03-26 02:43:42] ✓ [任务 28] 完成 | seed=1051 | (295.2s)
+[2026-03-26 02:43:42] 
+[任务 30] 开始 | seed=7168 | Brown vase with micro stripe pattern...
+[2026-03-26 02:43:42] 配置文件：editing_config_batch/0a505cc6635745edbcf9476b65402a53/0a505cc6635745edbcf9476b65402a53_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch029_seed7168.yaml
+[2026-03-26 02:47:58] ✓ [任务 29] 完成 | seed=4812 | (337.8s)
+[2026-03-26 02:47:58] 
+[任务 31] 开始 | seed=7206 | Brown vase with faint hexagon pattern...
+[2026-03-26 02:47:58] 配置文件：editing_config_batch/0a505cc6635745edbcf9476b65402a53/0a505cc6635745edbcf9476b65402a53_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch030_seed7206.yaml
+[2026-03-26 02:49:16] ✓ [任务 30] 完成 | seed=7168 | (334.2s)
+[2026-03-26 02:49:16] 
+[任务 32] 开始 | seed=3211 | Brown vase with faint hexagon pattern...
+[2026-03-26 02:49:16] 配置文件：editing_config_batch/0a505cc6635745edbcf9476b65402a53/0a505cc6635745edbcf9476b65402a53_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch031_seed3211.yaml
+[2026-03-26 02:53:02] ✓ [任务 31] 完成 | seed=7206 | (304.0s)
+[2026-03-26 02:53:02] 
+[任务 33] 开始 | seed=2231 | Brown vase with tiny diamond pattern...
+[2026-03-26 02:53:02] 配置文件：editing_config_batch/0a505cc6635745edbcf9476b65402a53/0a505cc6635745edbcf9476b65402a53_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch032_seed2231.yaml
+[2026-03-26 02:54:56] ✓ [任务 32] 完成 | seed=3211 | (340.1s)
+[2026-03-26 02:54:56] 
+[任务 34] 开始 | seed=1966 | Brown vase with tiny diamond pattern...
+[2026-03-26 02:54:56] 配置文件：editing_config_batch/0a505cc6635745edbcf9476b65402a53/0a505cc6635745edbcf9476b65402a53_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch033_seed1966.yaml
+[2026-03-26 02:58:26] ✓ [任务 33] 完成 | seed=2231 | (324.3s)
+[2026-03-26 02:58:26] 
+[任务 35] 开始 | seed=977 | Brown vase with minimal cross pattern...
+[2026-03-26 02:58:26] 配置文件：editing_config_batch/0a505cc6635745edbcf9476b65402a53/0a505cc6635745edbcf9476b65402a53_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch034_seed977.yaml
+[2026-03-26 03:00:18] ✓ [任务 34] 完成 | seed=1966 | (321.9s)
+[2026-03-26 03:00:18] 
+[任务 36] 开始 | seed=1179 | Brown vase with minimal cross pattern...
+[2026-03-26 03:00:18] 配置文件：editing_config_batch/0a505cc6635745edbcf9476b65402a53/0a505cc6635745edbcf9476b65402a53_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch035_seed1179.yaml
+[2026-03-26 03:03:53] ✓ [任务 35] 完成 | seed=977 | (327.0s)
+[2026-03-26 03:03:53] 
+[任务 37] 开始 | seed=5877 | Brown vase with subtle plus sign pattern...
+[2026-03-26 03:03:53] 配置文件：editing_config_batch/0a505cc6635745edbcf9476b65402a53/0a505cc6635745edbcf9476b65402a53_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch036_seed5877.yaml
+[2026-03-26 03:05:40] ✓ [任务 36] 完成 | seed=1179 | (322.2s)
+[2026-03-26 03:05:40] 
+[任务 38] 开始 | seed=4627 | Brown vase with subtle plus sign pattern...
+[2026-03-26 03:05:40] 配置文件：editing_config_batch/0a505cc6635745edbcf9476b65402a53/0a505cc6635745edbcf9476b65402a53_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch037_seed4627.yaml
+[2026-03-26 03:09:37] ✓ [任务 37] 完成 | seed=5877 | (344.1s)
+[2026-03-26 03:09:37] 
+[任务 39] 开始 | seed=1304 | Brown vase with faint wave line pattern...
+[2026-03-26 03:09:37] 配置文件：editing_config_batch/0a505cc6635745edbcf9476b65402a53/0a505cc6635745edbcf9476b65402a53_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch038_seed1304.yaml
+[2026-03-26 03:10:50] ✓ [任务 38] 完成 | seed=4627 | (309.5s)
+[2026-03-26 03:10:50] 
+[任务 40] 开始 | seed=1566 | Brown vase with faint wave line pattern...
+[2026-03-26 03:10:50] 配置文件：editing_config_batch/0a505cc6635745edbcf9476b65402a53/0a505cc6635745edbcf9476b65402a53_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch039_seed1566.yaml
+[2026-03-26 03:15:17] ✓ [任务 39] 完成 | seed=1304 | (339.4s)
+[2026-03-26 03:15:17] 
+[任务 41] 开始 | seed=7976 | Brown vase with micro zigzag pattern...
+[2026-03-26 03:15:17] 配置文件：editing_config_batch/0a505cc6635745edbcf9476b65402a53/0a505cc6635745edbcf9476b65402a53_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch040_seed7976.yaml
+[2026-03-26 03:16:22] ✓ [任务 40] 完成 | seed=1566 | (331.9s)
+[2026-03-26 03:16:22] 
+[任务 42] 开始 | seed=6153 | Brown vase with micro zigzag pattern...
+[2026-03-26 03:16:22] 配置文件：editing_config_batch/0a505cc6635745edbcf9476b65402a53/0a505cc6635745edbcf9476b65402a53_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch041_seed6153.yaml
+[2026-03-26 03:20:10] ✓ [任务 41] 完成 | seed=7976 | (293.8s)
+[2026-03-26 03:20:10] 
+[任务 43] 开始 | seed=1331 | Brown vase with small circle pattern...
+[2026-03-26 03:20:10] 配置文件：editing_config_batch/0a505cc6635745edbcf9476b65402a53/0a505cc6635745edbcf9476b65402a53_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch042_seed1331.yaml
+[2026-03-26 03:21:59] ✓ [任务 42] 完成 | seed=6153 | (336.9s)
+[2026-03-26 03:21:59] 
+[任务 44] 开始 | seed=2403 | Brown vase with small circle pattern...
+[2026-03-26 03:21:59] 配置文件：editing_config_batch/0a505cc6635745edbcf9476b65402a53/0a505cc6635745edbcf9476b65402a53_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch043_seed2403.yaml
+[2026-03-26 03:25:33] ✓ [任务 43] 完成 | seed=1331 | (322.6s)
+[2026-03-26 03:25:33] 
+[任务 45] 开始 | seed=1283 | Brown vase with delicate square pattern...
+[2026-03-26 03:25:33] 配置文件：editing_config_batch/0a505cc6635745edbcf9476b65402a53/0a505cc6635745edbcf9476b65402a53_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch044_seed1283.yaml
+[2026-03-26 03:27:24] ✓ [任务 44] 完成 | seed=2403 | (325.0s)
+[2026-03-26 03:27:24] 
+[任务 46] 开始 | seed=3621 | Brown vase with delicate square pattern...
+[2026-03-26 03:27:24] 配置文件：editing_config_batch/0a505cc6635745edbcf9476b65402a53/0a505cc6635745edbcf9476b65402a53_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch045_seed3621.yaml
+[2026-03-26 03:30:58] ✓ [任务 45] 完成 | seed=1283 | (325.1s)
+[2026-03-26 03:30:58] 
+[任务 47] 开始 | seed=756 | Brown vase with subtle triangle pattern...
+[2026-03-26 03:30:58] 配置文件：editing_config_batch/0a505cc6635745edbcf9476b65402a53/0a505cc6635745edbcf9476b65402a53_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch046_seed756.yaml
+[2026-03-26 03:32:46] ✓ [任务 46] 完成 | seed=3621 | (322.6s)
+[2026-03-26 03:32:46] 
+[任务 48] 开始 | seed=2991 | Brown vase with subtle triangle pattern...
+[2026-03-26 03:32:46] 配置文件：editing_config_batch/0a505cc6635745edbcf9476b65402a53/0a505cc6635745edbcf9476b65402a53_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch047_seed2991.yaml
+[2026-03-26 03:36:43] ✓ [任务 47] 完成 | seed=756 | (345.4s)
+[2026-03-26 03:36:43] 
+[任务 49] 开始 | seed=9194 | Brown vase with faint spiral dot pattern...
+[2026-03-26 03:36:43] 配置文件：editing_config_batch/0a505cc6635745edbcf9476b65402a53/0a505cc6635745edbcf9476b65402a53_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch048_seed9194.yaml
+[2026-03-26 03:37:54] ✓ [任务 48] 完成 | seed=2991 | (307.7s)
+[2026-03-26 03:37:54] 
+[任务 50] 开始 | seed=6573 | Brown vase with faint spiral dot pattern...
+[2026-03-26 03:37:54] 配置文件：editing_config_batch/0a505cc6635745edbcf9476b65402a53/0a505cc6635745edbcf9476b65402a53_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch049_seed6573.yaml
+[2026-03-26 03:42:09] ✓ [任务 49] 完成 | seed=9194 | (325.7s)
+[2026-03-26 03:42:09] 
+[任务 51] 开始 | seed=5220 | Brown vase with minimal checker pattern...
+[2026-03-26 03:42:09] 配置文件：editing_config_batch/0a505cc6635745edbcf9476b65402a53/0a505cc6635745edbcf9476b65402a53_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch050_seed5220.yaml
+[2026-03-26 03:43:37] ✓ [任务 50] 完成 | seed=6573 | (343.3s)
+[2026-03-26 03:43:37] 
+[任务 52] 开始 | seed=7039 | Brown vase with minimal checker pattern...
+[2026-03-26 03:43:37] 配置文件：editing_config_batch/0a505cc6635745edbcf9476b65402a53/0a505cc6635745edbcf9476b65402a53_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch051_seed7039.yaml
+[2026-03-26 03:47:07] ✓ [任务 51] 完成 | seed=5220 | (297.7s)
+[2026-03-26 03:47:07] 
+[任务 53] 开始 | seed=5651 | Brown vase with soft curve line pattern...
+[2026-03-26 03:47:07] 配置文件：editing_config_batch/0a505cc6635745edbcf9476b65402a53/0a505cc6635745edbcf9476b65402a53_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch052_seed5651.yaml
+[2026-03-26 03:49:04] ✓ [任务 52] 完成 | seed=7039 | (326.4s)
+[2026-03-26 03:49:04] 
+[任务 54] 开始 | seed=8222 | Brown vase with soft curve line pattern...
+[2026-03-26 03:49:04] 配置文件：editing_config_batch/0a505cc6635745edbcf9476b65402a53/0a505cc6635745edbcf9476b65402a53_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch053_seed8222.yaml
+[2026-03-26 03:52:32] ✓ [任务 53] 完成 | seed=5651 | (324.9s)
+[2026-03-26 03:52:32] 
+[任务 55] 开始 | seed=789 | Brown vase with soft marble vein pattern...
+[2026-03-26 03:52:32] 配置文件：editing_config_batch/0a505cc6635745edbcf9476b65402a53/0a505cc6635745edbcf9476b65402a53_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch054_seed789.yaml
+[2026-03-26 03:54:29] ✓ [任务 54] 完成 | seed=8222 | (325.1s)
+[2026-03-26 03:54:29] 
+[任务 56] 开始 | seed=9379 | Brown vase with soft marble vein pattern...
+[2026-03-26 03:54:29] 配置文件：editing_config_batch/0a505cc6635745edbcf9476b65402a53/0a505cc6635745edbcf9476b65402a53_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch055_seed9379.yaml
+[2026-03-26 03:58:02] ✓ [任务 55] 完成 | seed=789 | (330.1s)
+[2026-03-26 03:58:02] 
+[任务 57] 开始 | seed=6046 | Brown vase with subtle watercolor wash...
+[2026-03-26 03:58:02] 配置文件：editing_config_batch/0a505cc6635745edbcf9476b65402a53/0a505cc6635745edbcf9476b65402a53_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch056_seed6046.yaml
+[2026-03-26 03:59:45] ✓ [任务 56] 完成 | seed=9379 | (316.2s)
+[2026-03-26 03:59:45] 
+[任务 58] 开始 | seed=3897 | Brown vase with subtle watercolor wash...
+[2026-03-26 03:59:45] 配置文件：editing_config_batch/0a505cc6635745edbcf9476b65402a53/0a505cc6635745edbcf9476b65402a53_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch057_seed3897.yaml
+[2026-03-26 04:03:42] ✓ [任务 57] 完成 | seed=6046 | (339.8s)
+[2026-03-26 04:03:42] 
+[任务 59] 开始 | seed=8843 | Brown vase with faint ink bleed pattern...
+[2026-03-26 04:03:42] 配置文件：editing_config_batch/0a505cc6635745edbcf9476b65402a53/0a505cc6635745edbcf9476b65402a53_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch058_seed8843.yaml
+[2026-03-26 04:05:10] ✓ [任务 58] 完成 | seed=3897 | (324.9s)
+[2026-03-26 04:05:10] 
+[任务 60] 开始 | seed=8565 | Brown vase with faint ink bleed pattern...
+[2026-03-26 04:05:10] 配置文件：editing_config_batch/0a505cc6635745edbcf9476b65402a53/0a505cc6635745edbcf9476b65402a53_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch059_seed8565.yaml
+[2026-03-26 04:09:02] ✓ [任务 59] 完成 | seed=8843 | (320.7s)
+[2026-03-26 04:09:02] 
+[任务 61] 开始 | seed=2134 | Brown vase with delicate smoke trail...
+[2026-03-26 04:09:02] 配置文件：editing_config_batch/0a505cc6635745edbcf9476b65402a53/0a505cc6635745edbcf9476b65402a53_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch060_seed2134.yaml
+[2026-03-26 04:10:54] ✓ [任务 60] 完成 | seed=8565 | (344.5s)
+[2026-03-26 04:10:54] 
+[任务 62] 开始 | seed=5304 | Brown vase with delicate smoke trail...
+[2026-03-26 04:10:54] 配置文件：editing_config_batch/0a505cc6635745edbcf9476b65402a53/0a505cc6635745edbcf9476b65402a53_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch061_seed5304.yaml
+[2026-03-26 04:14:12] ✓ [任务 61] 完成 | seed=2134 | (309.7s)
+[2026-03-26 04:14:12] 
+[任务 63] 开始 | seed=714 | Brown vase with minimal cloud texture...
+[2026-03-26 04:14:12] 配置文件：editing_config_batch/0a505cc6635745edbcf9476b65402a53/0a505cc6635745edbcf9476b65402a53_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch062_seed714.yaml
+[2026-03-26 04:16:20] ✓ [任务 62] 完成 | seed=5304 | (325.6s)
+[2026-03-26 04:16:20] 
+[任务 64] 开始 | seed=9325 | Brown vase with minimal cloud texture...
+[2026-03-26 04:16:20] 配置文件：editing_config_batch/0a505cc6635745edbcf9476b65402a53/0a505cc6635745edbcf9476b65402a53_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch063_seed9325.yaml
+[2026-03-26 04:19:37] ✓ [任务 63] 完成 | seed=714 | (324.6s)
+[2026-03-26 04:19:37] 
+[任务 65] 开始 | seed=4739 | Brown vase with soft mist pattern...
+[2026-03-26 04:19:37] 配置文件：editing_config_batch/0a505cc6635745edbcf9476b65402a53/0a505cc6635745edbcf9476b65402a53_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch064_seed4739.yaml
+[2026-03-26 04:21:47] ✓ [任务 64] 完成 | seed=9325 | (326.9s)
+[2026-03-26 04:21:47] 
+[任务 66] 开始 | seed=4989 | Brown vase with soft mist pattern...
+[2026-03-26 04:21:47] 配置文件：editing_config_batch/0a505cc6635745edbcf9476b65402a53/0a505cc6635745edbcf9476b65402a53_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch065_seed4989.yaml
+[2026-03-26 04:25:02] ✓ [任务 65] 完成 | seed=4739 | (325.1s)
+[2026-03-26 04:25:02] 
+[任务 67] 开始 | seed=9549 | Brown vase with subtle fog texture...
+[2026-03-26 04:25:02] 配置文件：editing_config_batch/0a505cc6635745edbcf9476b65402a53/0a505cc6635745edbcf9476b65402a53_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch066_seed9549.yaml
+[2026-03-26 04:26:58] ✓ [任务 66] 完成 | seed=4989 | (311.1s)
+[2026-03-26 04:26:58] 
+[任务 68] 开始 | seed=3235 | Brown vase with subtle fog texture...
+[2026-03-26 04:26:58] 配置文件：editing_config_batch/0a505cc6635745edbcf9476b65402a53/0a505cc6635745edbcf9476b65402a53_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch067_seed3235.yaml
+[2026-03-26 04:30:34] ✓ [任务 67] 完成 | seed=9549 | (332.7s)
+[2026-03-26 04:30:34] 
+[任务 69] 开始 | seed=6988 | Brown vase with faint water ripple patte...
+[2026-03-26 04:30:34] 配置文件：editing_config_batch/0a505cc6635745edbcf9476b65402a53/0a505cc6635745edbcf9476b65402a53_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch068_seed6988.yaml
+[2026-03-26 04:32:31] ✓ [任务 68] 完成 | seed=3235 | (332.9s)
+[2026-03-26 04:32:31] 
+[任务 70] 开始 | seed=9354 | Brown vase with faint water ripple patte...
+[2026-03-26 04:32:31] 配置文件：editing_config_batch/0a505cc6635745edbcf9476b65402a53/0a505cc6635745edbcf9476b65402a53_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch069_seed9354.yaml
+[2026-03-26 04:35:50] ✓ [任务 69] 完成 | seed=6988 | (315.9s)
+[2026-03-26 04:35:50] 
+[任务 71] 开始 | seed=171 | Brown vase with delicate flow line patte...
+[2026-03-26 04:35:50] 配置文件：editing_config_batch/0a505cc6635745edbcf9476b65402a53/0a505cc6635745edbcf9476b65402a53_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch070_seed171.yaml
+[2026-03-26 04:38:15] ✓ [任务 70] 完成 | seed=9354 | (344.1s)
+[2026-03-26 04:38:15] 
+[任务 72] 开始 | seed=5494 | Brown vase with delicate flow line patte...
+[2026-03-26 04:38:15] 配置文件：editing_config_batch/0a505cc6635745edbcf9476b65402a53/0a505cc6635745edbcf9476b65402a53_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch071_seed5494.yaml
+[2026-03-26 04:41:10] ✓ [任务 71] 完成 | seed=171 | (319.2s)
+[2026-03-26 04:41:10] 
+[任务 73] 开始 | seed=3219 | Brown vase with minimal gradient texture...
+[2026-03-26 04:41:10] 配置文件：editing_config_batch/0a505cc6635745edbcf9476b65402a53/0a505cc6635745edbcf9476b65402a53_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch072_seed3219.yaml
+[2026-03-26 04:43:40] ✓ [任务 72] 完成 | seed=5494 | (325.3s)
+[2026-03-26 04:43:40] 
+[任务 74] 开始 | seed=5121 | Brown vase with minimal gradient texture...
+[2026-03-26 04:43:40] 配置文件：editing_config_batch/0a505cc6635745edbcf9476b65402a53/0a505cc6635745edbcf9476b65402a53_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch073_seed5121.yaml
+[2026-03-26 04:46:36] ✓ [任务 73] 完成 | seed=3219 | (326.1s)
+[2026-03-26 04:46:36] 
+[任务 75] 开始 | seed=2837 | Brown vase with delicate leaf vein patte...
+[2026-03-26 04:46:36] 配置文件：editing_config_batch/0a505cc6635745edbcf9476b65402a53/0a505cc6635745edbcf9476b65402a53_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch074_seed2837.yaml

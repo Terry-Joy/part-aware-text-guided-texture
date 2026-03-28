@@ -831,12 +831,12 @@ class StableSyncMVDPipeline(StableDiffusionControlNetPipeline):
                 back_view_diff = abs(azim - 180)
         # front_view_idx是离0最近的一个视角的id，back是180度最近
         # Add two additional cameras for painting the top surfaces
-        # if top_cameras:
-        #     self.camera_poses.append((30, 0))
-        #     self.camera_poses.append((30, 180))
+        if top_cameras:
+            self.camera_poses.append((30, 0))
+            self.camera_poses.append((30, 180))
 
-        #     self.attention_mask.append([front_view_idx, cam_count])
-        #     self.attention_mask.append([back_view_idx, cam_count+1])
+            self.attention_mask.append([front_view_idx, cam_count])
+            self.attention_mask.append([back_view_idx, cam_count+1])
 
         # Reference view for attention (all views attend the the views in this list)
         # A forward view will be used if not specified
@@ -946,6 +946,8 @@ class StableSyncMVDPipeline(StableDiffusionControlNetPipeline):
                 # 2. 切片：把 6144 宽切成 6 份 1024 [6, 3, 1024, 1024]
                 view_list = torch.chunk(img_tensor, 6, dim=-1)
                 images_batched = torch.cat(view_list, dim=0) 
+                print('????')
+                
 
                 # 3. Resize 到 768 (为了编码成 96 的 Latent)
                 images_768 = F.interpolate(
@@ -954,7 +956,8 @@ class StableSyncMVDPipeline(StableDiffusionControlNetPipeline):
                     mode="bilinear", 
                     align_corners=False
                 ).to(images_batched.dtype) # 插值完再转回原来的精度（比如 float16）
-
+                
+                self.original_highres_rgb = images_768.clone().to(self._execution_device)
                 # 4. VAE 编码 (搬运 Device 策略)
                 # self.vae.to(self._execution_device)
                 p_views_latent = encode_latents(self.vae, images_768.to(self._execution_device))
@@ -972,6 +975,7 @@ class StableSyncMVDPipeline(StableDiffusionControlNetPipeline):
                     mask_batched = torch.cat(mask_list, dim=0) # [6, 1, 768, 768]
                 else:
                     mask_batched = mask_tensor # 只有一张就直接用（或根据视角数 repeat）
+                self.original_highres_mask = mask_batched.clone().to(self._execution_device)
 
                 # 5. 直接把 768 下采样到 96 (Latent 尺寸)
                 latent_h, latent_w = 768 // 8, 768 // 8 # 应该是 96
@@ -1074,6 +1078,9 @@ class StableSyncMVDPipeline(StableDiffusionControlNetPipeline):
         
         painted_views = None, 
         painted_mask = None,
+        
+        do_highres_fix: bool = False, 
+        highres_blur_kernel: int = 11, # 边缘羽化强度，值越大接缝越平滑
     ):
         # Setup pipeline settings
         self.initialize_pipeline(
@@ -1832,6 +1839,41 @@ class StableSyncMVDPipeline(StableDiffusionControlNetPipeline):
         result_tex_rgb, result_tex_rgb_output, result_views, inpaint_mask = get_unconsistent_image(
             self.vae, self.uvp_rgb, latents)
 
+        # 👇👇👇 【核心：直接替换逻辑】 👇👇👇
+        print('！！！！！do', do_highres_fix)
+        # do
+        if do_highres_fix and hasattr(self, 'original_highres_rgb'):
+            print("🚀 检测到 do_highres_fix=True，开始进行像素级细节找回...")
+            
+            gen_views = torch.stack(result_views, dim=0).to(self._execution_device)
+            orig_views = self.original_highres_rgb.to(self._execution_device)
+            orig_mask = self.original_highres_mask.to(self._execution_device)
+            
+            # 1. 确保生成的图和原图（768）尺寸一致
+            if gen_views.shape[-2:] != orig_views.shape[-2:]:
+                gen_views = F.interpolate(gen_views.float(), size=orig_views.shape[-2:], mode="bilinear", align_corners=False).to(gen_views.dtype)
+            
+            # 2. Mask 羽化平滑接缝
+            smooth_mask = T.functional.gaussian_blur(orig_mask, kernel_size=[highres_blur_kernel, highres_blur_kernel])
+            
+            # 3. 融合出修改后的图片 (此时尺寸是 768)
+            fixed_views_tensor = orig_views * smooth_mask + gen_views * (1.0 - smooth_mask)
+            
+            # 🚀🚀🚀 4. 关键修复：送给烘焙器之前，必须拉伸到 uvp_rgb 要求的 1024 尺寸！
+            target_size = (self.uvp_rgb.render_size, self.uvp_rgb.render_size) # 提取 1024
+            fixed_views_tensor = F.interpolate(
+                fixed_views_tensor.float(), 
+                size=target_size, 
+                mode="bilinear", 
+                align_corners=False
+            ).to(fixed_views_tensor.dtype)
+            
+            # 5. 更新并烘焙
+            result_views = [fixed_views_tensor[i] for i in range(fixed_views_tensor.shape[0])]
+            
+            self.uvp_rgb.to(self._execution_device)
+            _, result_tex_rgb, _ = self.uvp_rgb.bake_texture(views=result_views, main_views=[], exp=0.0)
+            print("✅ 细节找回成功：非编辑区已恢复高清，UV 纹理已重烘焙。")
         # 原始不一致多视角图片保存
         result_views_rgb = torch.cat(result_views, axis=-1)  # 拼接成 [3, H, N*W]
         result_views_rgb = result_views_rgb.permute(1, 2, 0).cpu().numpy()[None, ...]

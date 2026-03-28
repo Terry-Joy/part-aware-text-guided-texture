@@ -1,0 +1,366 @@
+[2026-03-26 12:05:15] ======================================================================
+[2026-03-26 12:05:15] 批量任务启动 | Prompts: 21 | Seeds/Prompt: 2
+[2026-03-26 12:05:15] 总任务数：42 | 待运行：42 | 并行：2
+[2026-03-26 12:05:15] GPU: 0 | OMP_THREADS: 1
+[2026-03-26 12:05:15] ======================================================================
+[2026-03-26 12:05:16] 
+已生成 42 个配置文件
+[2026-03-26 12:05:16] ======================================================================
+[2026-03-26 12:05:16] 开始执行任务...
+[2026-03-26 12:05:16] ======================================================================
+[2026-03-26 12:05:16] 
+[任务 1] 开始 | seed=1 | weathered wood frame, two posts and beam...
+[2026-03-26 12:05:16] 
+[任务 2] 开始 | seed=3 | weathered wood frame, two posts and beam...
+[2026-03-26 12:05:16] 配置文件：editing_config_batch/314d5728e6ac496abdf1fe7268ca9ae0/314d5728e6ac496abdf1fe7268ca9ae0_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch000_seed1.yaml
+[2026-03-26 12:05:16] 配置文件：editing_config_batch/314d5728e6ac496abdf1fe7268ca9ae0/314d5728e6ac496abdf1fe7268ca9ae0_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch001_seed3.yaml
+[2026-03-26 12:07:32] ======================================================================
+[2026-03-26 12:07:32] 批量任务启动 | Prompts: 21 | Seeds/Prompt: 2
+[2026-03-26 12:07:32] 总任务数：42 | 待运行：42 | 并行：2
+[2026-03-26 12:07:32] GPU: 0 | OMP_THREADS: 1
+[2026-03-26 12:07:32] ======================================================================
+[2026-03-26 12:07:32] 
+已生成 42 个配置文件
+[2026-03-26 12:07:32] ======================================================================
+[2026-03-26 12:07:32] 开始执行任务...
+[2026-03-26 12:07:32] ======================================================================
+[2026-03-26 12:07:32] 
+[任务 1] 开始 | seed=1 | weathered wood frame, two posts and beam...
+[2026-03-26 12:07:32] 
+[任务 2] 开始 | seed=3 | weathered wood frame, two posts and beam...
+[2026-03-26 12:07:32] 配置文件：editing_config_batch/314d5728e6ac496abdf1fe7268ca9ae0/xiaorong/314d5728e6ac496abdf1fe7268ca9ae0_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch000_seed1.yaml
+[2026-03-26 12:07:32] 配置文件：editing_config_batch/314d5728e6ac496abdf1fe7268ca9ae0/xiaorong/314d5728e6ac496abdf1fe7268ca9ae0_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch001_seed3.yaml
+[2026-03-26 12:08:17] ✓ [任务 1] 完成 | seed=1 | (181.3s)
+[2026-03-26 12:08:17] 
+[任务 3] 开始 | seed=1 | weathered wood frame, two posts and beam...
+[2026-03-26 12:08:17] 配置文件：editing_config_batch/314d5728e6ac496abdf1fe7268ca9ae0/314d5728e6ac496abdf1fe7268ca9ae0_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch002_seed1.yaml
+[2026-03-26 12:08:17] ✓ [任务 2] 完成 | seed=3 | (181.8s)
+[2026-03-26 12:08:17] 
+[任务 4] 开始 | seed=3 | weathered wood frame, two posts and beam...
+[2026-03-26 12:08:17] 配置文件：editing_config_batch/314d5728e6ac496abdf1fe7268ca9ae0/314d5728e6ac496abdf1fe7268ca9ae0_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch003_seed3.yaml
+[2026-03-26 12:12:28] ✓ [任务 2] 完成 | seed=3 | (295.6s)
+[2026-03-26 12:12:28] 
+[任务 3] 开始 | seed=3 | weathered wood frame, two posts and beam...
+[2026-03-26 12:12:28] 配置文件：editing_config_batch/314d5728e6ac496abdf1fe7268ca9ae0/xiaorong/314d5728e6ac496abdf1fe7268ca9ae0_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch002_seed3.yaml
+[2026-03-26 12:12:28] ✓ [任务 1] 完成 | seed=1 | (295.8s)
+[2026-03-26 12:12:28] 
+[任务 4] 开始 | seed=1 | weathered wood frame, two posts and beam...
+[2026-03-26 12:12:28] 配置文件：editing_config_batch/314d5728e6ac496abdf1fe7268ca9ae0/xiaorong/314d5728e6ac496abdf1fe7268ca9ae0_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch003_seed1.yaml
+[2026-03-26 12:13:23] ✓ [任务 3] 完成 | seed=1 | (306.3s)
+[2026-03-26 12:13:23] 
+[任务 5] 开始 | seed=1 | weathered wood frame, two posts and beam...
+[2026-03-26 12:13:23] 配置文件：editing_config_batch/314d5728e6ac496abdf1fe7268ca9ae0/314d5728e6ac496abdf1fe7268ca9ae0_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch004_seed1.yaml
+[2026-03-26 12:13:24] ✓ [任务 4] 完成 | seed=3 | (306.0s)
+[2026-03-26 12:13:24] 
+[任务 6] 开始 | seed=3 | weathered wood frame, two posts and beam...
+[2026-03-26 12:13:24] 配置文件：editing_config_batch/314d5728e6ac496abdf1fe7268ca9ae0/314d5728e6ac496abdf1fe7268ca9ae0_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch005_seed3.yaml
+[2026-03-26 12:17:21] ✓ [任务 3] 完成 | seed=3 | (292.8s)
+[2026-03-26 12:17:21] 
+[任务 5] 开始 | seed=3 | weathered wood frame, two posts and beam...
+[2026-03-26 12:17:21] 配置文件：editing_config_batch/314d5728e6ac496abdf1fe7268ca9ae0/xiaorong/314d5728e6ac496abdf1fe7268ca9ae0_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch004_seed3.yaml
+[2026-03-26 12:17:21] ✓ [任务 4] 完成 | seed=1 | (292.8s)
+[2026-03-26 12:17:21] 
+[任务 6] 开始 | seed=1 | weathered wood frame, two posts and beam...
+[2026-03-26 12:17:21] 配置文件：editing_config_batch/314d5728e6ac496abdf1fe7268ca9ae0/xiaorong/314d5728e6ac496abdf1fe7268ca9ae0_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch005_seed1.yaml
+[2026-03-26 12:18:23] ✓ [任务 5] 完成 | seed=1 | (300.0s)
+[2026-03-26 12:18:23] 
+[任务 7] 开始 | seed=3 | weathered wood frame, two posts and beam...
+[2026-03-26 12:18:23] 配置文件：editing_config_batch/314d5728e6ac496abdf1fe7268ca9ae0/314d5728e6ac496abdf1fe7268ca9ae0_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch006_seed3.yaml
+[2026-03-26 12:18:30] ✓ [任务 6] 完成 | seed=3 | (306.8s)
+[2026-03-26 12:18:30] 
+[任务 8] 开始 | seed=1 | weathered wood frame, two posts and beam...
+[2026-03-26 12:18:30] 配置文件：editing_config_batch/314d5728e6ac496abdf1fe7268ca9ae0/314d5728e6ac496abdf1fe7268ca9ae0_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch007_seed1.yaml
+[2026-03-26 12:22:21] ✓ [任务 5] 完成 | seed=3 | (300.6s)
+[2026-03-26 12:22:21] 
+[任务 7] 开始 | seed=1 | weathered wood frame, two posts and beam...
+[2026-03-26 12:22:21] 配置文件：editing_config_batch/314d5728e6ac496abdf1fe7268ca9ae0/xiaorong/314d5728e6ac496abdf1fe7268ca9ae0_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch006_seed1.yaml
+[2026-03-26 12:22:21] ✓ [任务 6] 完成 | seed=1 | (300.7s)
+[2026-03-26 12:22:21] 
+[任务 8] 开始 | seed=3 | weathered wood frame, two posts and beam...
+[2026-03-26 12:22:21] 配置文件：editing_config_batch/314d5728e6ac496abdf1fe7268ca9ae0/xiaorong/314d5728e6ac496abdf1fe7268ca9ae0_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch007_seed3.yaml
+[2026-03-26 12:23:28] ✓ [任务 7] 完成 | seed=3 | (304.6s)
+[2026-03-26 12:23:28] 
+[任务 9] 开始 | seed=1 | weathered wood frame, two posts and beam...
+[2026-03-26 12:23:28] 配置文件：editing_config_batch/314d5728e6ac496abdf1fe7268ca9ae0/314d5728e6ac496abdf1fe7268ca9ae0_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch008_seed1.yaml
+[2026-03-26 12:23:35] ✓ [任务 8] 完成 | seed=1 | (305.1s)
+[2026-03-26 12:23:35] 
+[任务 10] 开始 | seed=3 | weathered wood frame, two posts and beam...
+[2026-03-26 12:23:35] 配置文件：editing_config_batch/314d5728e6ac496abdf1fe7268ca9ae0/314d5728e6ac496abdf1fe7268ca9ae0_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch009_seed3.yaml
+[2026-03-26 12:27:16] ✓ [任务 7] 完成 | seed=1 | (294.9s)
+[2026-03-26 12:27:16] 
+[任务 9] 开始 | seed=3 | weathered wood frame, two posts and beam...
+[2026-03-26 12:27:16] 配置文件：editing_config_batch/314d5728e6ac496abdf1fe7268ca9ae0/xiaorong/314d5728e6ac496abdf1fe7268ca9ae0_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch008_seed3.yaml
+[2026-03-26 12:27:17] ✓ [任务 8] 完成 | seed=3 | (295.3s)
+[2026-03-26 12:27:17] 
+[任务 10] 开始 | seed=1 | weathered wood frame, two posts and beam...
+[2026-03-26 12:27:17] 配置文件：editing_config_batch/314d5728e6ac496abdf1fe7268ca9ae0/xiaorong/314d5728e6ac496abdf1fe7268ca9ae0_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch009_seed1.yaml
+[2026-03-26 12:28:31] ✓ [任务 9] 完成 | seed=1 | (303.3s)
+[2026-03-26 12:28:31] 
+[任务 11] 开始 | seed=1 | weathered wood frame, two posts and beam...
+[2026-03-26 12:28:31] 配置文件：editing_config_batch/314d5728e6ac496abdf1fe7268ca9ae0/314d5728e6ac496abdf1fe7268ca9ae0_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch010_seed1.yaml
+[2026-03-26 12:28:39] ✓ [任务 10] 完成 | seed=3 | (303.1s)
+[2026-03-26 12:28:39] 
+[任务 12] 开始 | seed=3 | weathered wood frame, two posts and beam...
+[2026-03-26 12:28:39] 配置文件：editing_config_batch/314d5728e6ac496abdf1fe7268ca9ae0/314d5728e6ac496abdf1fe7268ca9ae0_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch011_seed3.yaml
+[2026-03-26 12:32:12] ✓ [任务 9] 完成 | seed=3 | (296.3s)
+[2026-03-26 12:32:12] 
+[任务 11] 开始 | seed=3 | weathered wood frame, two posts and beam...
+[2026-03-26 12:32:12] 配置文件：editing_config_batch/314d5728e6ac496abdf1fe7268ca9ae0/xiaorong/314d5728e6ac496abdf1fe7268ca9ae0_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch010_seed3.yaml
+[2026-03-26 12:32:16] ✓ [任务 10] 完成 | seed=1 | (299.1s)
+[2026-03-26 12:32:16] 
+[任务 12] 开始 | seed=1 | weathered wood frame, two posts and beam...
+[2026-03-26 12:32:16] 配置文件：editing_config_batch/314d5728e6ac496abdf1fe7268ca9ae0/xiaorong/314d5728e6ac496abdf1fe7268ca9ae0_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch011_seed1.yaml
+[2026-03-26 12:33:34] ✓ [任务 11] 完成 | seed=1 | (302.6s)
+[2026-03-26 12:33:34] 
+[任务 13] 开始 | seed=3 | weathered wood frame, two posts and beam...
+[2026-03-26 12:33:34] 配置文件：editing_config_batch/314d5728e6ac496abdf1fe7268ca9ae0/314d5728e6ac496abdf1fe7268ca9ae0_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch012_seed3.yaml
+[2026-03-26 12:33:44] ✓ [任务 12] 完成 | seed=3 | (305.4s)
+[2026-03-26 12:33:44] 
+[任务 14] 开始 | seed=1 | weathered wood frame, two posts and beam...
+[2026-03-26 12:33:44] 配置文件：editing_config_batch/314d5728e6ac496abdf1fe7268ca9ae0/314d5728e6ac496abdf1fe7268ca9ae0_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch013_seed1.yaml
+[2026-03-26 12:37:18] ✓ [任务 12] 完成 | seed=1 | (302.6s)
+[2026-03-26 12:37:18] 
+[任务 13] 开始 | seed=1 | weathered wood frame, two posts and beam...
+[2026-03-26 12:37:18] 配置文件：editing_config_batch/314d5728e6ac496abdf1fe7268ca9ae0/xiaorong/314d5728e6ac496abdf1fe7268ca9ae0_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch012_seed1.yaml
+[2026-03-26 12:37:19] ✓ [任务 11] 完成 | seed=3 | (306.6s)
+[2026-03-26 12:37:19] 
+[任务 14] 开始 | seed=3 | weathered wood frame, two posts and beam...
+[2026-03-26 12:37:19] 配置文件：editing_config_batch/314d5728e6ac496abdf1fe7268ca9ae0/xiaorong/314d5728e6ac496abdf1fe7268ca9ae0_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch013_seed3.yaml
+[2026-03-26 12:38:23] ✓ [任务 13] 完成 | seed=3 | (289.2s)
+[2026-03-26 12:38:23] 
+[任务 15] 开始 | seed=1 | weathered wood frame, two posts and beam...
+[2026-03-26 12:38:23] 配置文件：editing_config_batch/314d5728e6ac496abdf1fe7268ca9ae0/314d5728e6ac496abdf1fe7268ca9ae0_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch014_seed1.yaml
+[2026-03-26 12:38:37] ✓ [任务 14] 完成 | seed=1 | (293.5s)
+[2026-03-26 12:38:37] 
+[任务 16] 开始 | seed=3 | weathered wood frame, two posts and beam...
+[2026-03-26 12:38:37] 配置文件：editing_config_batch/314d5728e6ac496abdf1fe7268ca9ae0/314d5728e6ac496abdf1fe7268ca9ae0_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch015_seed3.yaml
+[2026-03-26 12:42:17] ✓ [任务 14] 完成 | seed=3 | (298.5s)
+[2026-03-26 12:42:17] 
+[任务 15] 开始 | seed=1 | weathered wood frame, two posts and beam...
+[2026-03-26 12:42:17] 配置文件：editing_config_batch/314d5728e6ac496abdf1fe7268ca9ae0/xiaorong/314d5728e6ac496abdf1fe7268ca9ae0_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch014_seed1.yaml
+[2026-03-26 12:42:18] ✓ [任务 13] 完成 | seed=1 | (299.2s)
+[2026-03-26 12:42:18] 
+[任务 16] 开始 | seed=3 | weathered wood frame, two posts and beam...
+[2026-03-26 12:42:18] 配置文件：editing_config_batch/314d5728e6ac496abdf1fe7268ca9ae0/xiaorong/314d5728e6ac496abdf1fe7268ca9ae0_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch015_seed3.yaml
+[2026-03-26 12:43:24] ✓ [任务 15] 完成 | seed=1 | (300.6s)
+[2026-03-26 12:43:24] 
+[任务 17] 开始 | seed=1 | weathered wood frame, two posts and beam...
+[2026-03-26 12:43:24] 配置文件：editing_config_batch/314d5728e6ac496abdf1fe7268ca9ae0/314d5728e6ac496abdf1fe7268ca9ae0_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch016_seed1.yaml
+[2026-03-26 12:43:44] ✓ [任务 16] 完成 | seed=3 | (306.6s)
+[2026-03-26 12:43:44] 
+[任务 18] 开始 | seed=3 | weathered wood frame, two posts and beam...
+[2026-03-26 12:43:44] 配置文件：editing_config_batch/314d5728e6ac496abdf1fe7268ca9ae0/314d5728e6ac496abdf1fe7268ca9ae0_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch017_seed3.yaml
+[2026-03-26 12:47:12] ✓ [任务 16] 完成 | seed=3 | (294.8s)
+[2026-03-26 12:47:12] 
+[任务 17] 开始 | seed=1 | weathered wood frame, two posts and beam...
+[2026-03-26 12:47:12] 配置文件：editing_config_batch/314d5728e6ac496abdf1fe7268ca9ae0/xiaorong/314d5728e6ac496abdf1fe7268ca9ae0_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch016_seed1.yaml
+[2026-03-26 12:47:13] ✓ [任务 15] 完成 | seed=1 | (295.0s)
+[2026-03-26 12:47:13] 
+[任务 18] 开始 | seed=3 | weathered wood frame, two posts and beam...
+[2026-03-26 12:47:13] 配置文件：editing_config_batch/314d5728e6ac496abdf1fe7268ca9ae0/xiaorong/314d5728e6ac496abdf1fe7268ca9ae0_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch017_seed3.yaml
+[2026-03-26 12:48:20] ✓ [任务 17] 完成 | seed=1 | (296.5s)
+[2026-03-26 12:48:20] 
+[任务 19] 开始 | seed=1 | weathered wood frame, two posts and beam...
+[2026-03-26 12:48:20] 配置文件：editing_config_batch/314d5728e6ac496abdf1fe7268ca9ae0/314d5728e6ac496abdf1fe7268ca9ae0_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch018_seed1.yaml
+[2026-03-26 12:48:49] ✓ [任务 18] 完成 | seed=3 | (305.0s)
+[2026-03-26 12:48:49] 
+[任务 20] 开始 | seed=3 | weathered wood frame, two posts and beam...
+[2026-03-26 12:48:49] 配置文件：editing_config_batch/314d5728e6ac496abdf1fe7268ca9ae0/314d5728e6ac496abdf1fe7268ca9ae0_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch019_seed3.yaml
+[2026-03-26 12:52:12] ✓ [任务 17] 完成 | seed=1 | (299.5s)
+[2026-03-26 12:52:12] 
+[任务 19] 开始 | seed=3 | weathered wood frame, two posts and beam...
+[2026-03-26 12:52:12] 配置文件：editing_config_batch/314d5728e6ac496abdf1fe7268ca9ae0/xiaorong/314d5728e6ac496abdf1fe7268ca9ae0_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch018_seed3.yaml
+[2026-03-26 12:52:12] ✓ [任务 18] 完成 | seed=3 | (299.6s)
+[2026-03-26 12:52:12] 
+[任务 20] 开始 | seed=1 | weathered wood frame, two posts and beam...
+[2026-03-26 12:52:12] 配置文件：editing_config_batch/314d5728e6ac496abdf1fe7268ca9ae0/xiaorong/314d5728e6ac496abdf1fe7268ca9ae0_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch019_seed1.yaml
+[2026-03-26 12:53:20] ✓ [任务 19] 完成 | seed=1 | (300.1s)
+[2026-03-26 12:53:20] 
+[任务 21] 开始 | seed=1 | weathered wood frame, two posts and beam...
+[2026-03-26 12:53:20] 配置文件：editing_config_batch/314d5728e6ac496abdf1fe7268ca9ae0/314d5728e6ac496abdf1fe7268ca9ae0_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch020_seed1.yaml
+[2026-03-26 12:53:48] ✓ [任务 20] 完成 | seed=3 | (299.4s)
+[2026-03-26 12:53:48] 
+[任务 22] 开始 | seed=3 | weathered wood frame, two posts and beam...
+[2026-03-26 12:53:48] 配置文件：editing_config_batch/314d5728e6ac496abdf1fe7268ca9ae0/314d5728e6ac496abdf1fe7268ca9ae0_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch021_seed3.yaml
+[2026-03-26 12:57:12] ✓ [任务 20] 完成 | seed=1 | (300.3s)
+[2026-03-26 12:57:12] 
+[任务 21] 开始 | seed=1 | weathered wood frame, two posts and beam...
+[2026-03-26 12:57:12] 配置文件：editing_config_batch/314d5728e6ac496abdf1fe7268ca9ae0/xiaorong/314d5728e6ac496abdf1fe7268ca9ae0_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch020_seed1.yaml
+[2026-03-26 12:57:13] ✓ [任务 19] 完成 | seed=3 | (300.6s)
+[2026-03-26 12:57:13] 
+[任务 22] 开始 | seed=3 | weathered wood frame, two posts and beam...
+[2026-03-26 12:57:13] 配置文件：editing_config_batch/314d5728e6ac496abdf1fe7268ca9ae0/xiaorong/314d5728e6ac496abdf1fe7268ca9ae0_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch021_seed3.yaml
+[2026-03-26 12:58:19] ✓ [任务 21] 完成 | seed=1 | (298.8s)
+[2026-03-26 12:58:19] 
+[任务 23] 开始 | seed=1 | weathered wood frame, two posts and beam...
+[2026-03-26 12:58:19] 配置文件：editing_config_batch/314d5728e6ac496abdf1fe7268ca9ae0/314d5728e6ac496abdf1fe7268ca9ae0_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch022_seed1.yaml
+[2026-03-26 12:58:48] ✓ [任务 22] 完成 | seed=3 | (299.8s)
+[2026-03-26 12:58:48] 
+[任务 24] 开始 | seed=3 | weathered wood frame, two posts and beam...
+[2026-03-26 12:58:48] 配置文件：editing_config_batch/314d5728e6ac496abdf1fe7268ca9ae0/314d5728e6ac496abdf1fe7268ca9ae0_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch023_seed3.yaml
+[2026-03-26 13:02:15] ✓ [任务 22] 完成 | seed=3 | (302.2s)
+[2026-03-26 13:02:15] 
+[任务 23] 开始 | seed=1 | weathered wood frame, two posts and beam...
+[2026-03-26 13:02:15] 配置文件：editing_config_batch/314d5728e6ac496abdf1fe7268ca9ae0/xiaorong/314d5728e6ac496abdf1fe7268ca9ae0_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch022_seed1.yaml
+[2026-03-26 13:02:15] ✓ [任务 21] 完成 | seed=1 | (302.4s)
+[2026-03-26 13:02:15] 
+[任务 24] 开始 | seed=3 | weathered wood frame, two posts and beam...
+[2026-03-26 13:02:15] 配置文件：editing_config_batch/314d5728e6ac496abdf1fe7268ca9ae0/xiaorong/314d5728e6ac496abdf1fe7268ca9ae0_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch023_seed3.yaml
+[2026-03-26 13:03:10] ✓ [任务 23] 完成 | seed=1 | (291.2s)
+[2026-03-26 13:03:10] 
+[任务 25] 开始 | seed=1 | weathered wood frame, two posts and beam...
+[2026-03-26 13:03:10] 配置文件：editing_config_batch/314d5728e6ac496abdf1fe7268ca9ae0/314d5728e6ac496abdf1fe7268ca9ae0_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch024_seed1.yaml
+[2026-03-26 13:03:48] ✓ [任务 24] 完成 | seed=3 | (300.2s)
+[2026-03-26 13:03:48] 
+[任务 26] 开始 | seed=3 | weathered wood frame, two posts and beam...
+[2026-03-26 13:03:48] 配置文件：editing_config_batch/314d5728e6ac496abdf1fe7268ca9ae0/314d5728e6ac496abdf1fe7268ca9ae0_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch025_seed3.yaml
+[2026-03-26 13:07:17] ✓ [任务 23] 完成 | seed=1 | (302.3s)
+[2026-03-26 13:07:17] 
+[任务 25] 开始 | seed=1 | weathered wood frame, two posts and beam...
+[2026-03-26 13:07:17] 配置文件：editing_config_batch/314d5728e6ac496abdf1fe7268ca9ae0/xiaorong/314d5728e6ac496abdf1fe7268ca9ae0_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch024_seed1.yaml
+[2026-03-26 13:07:18] ✓ [任务 24] 完成 | seed=3 | (303.2s)
+[2026-03-26 13:07:18] 
+[任务 26] 开始 | seed=3 | weathered wood frame, two posts and beam...
+[2026-03-26 13:07:18] 配置文件：editing_config_batch/314d5728e6ac496abdf1fe7268ca9ae0/xiaorong/314d5728e6ac496abdf1fe7268ca9ae0_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch025_seed3.yaml
+[2026-03-26 13:08:04] ✓ [任务 25] 完成 | seed=1 | (293.7s)
+[2026-03-26 13:08:04] 
+[任务 27] 开始 | seed=3 | weathered wood frame, two posts and beam...
+[2026-03-26 13:08:04] 配置文件：editing_config_batch/314d5728e6ac496abdf1fe7268ca9ae0/314d5728e6ac496abdf1fe7268ca9ae0_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch026_seed3.yaml
+[2026-03-26 13:08:49] ✓ [任务 26] 完成 | seed=3 | (300.9s)
+[2026-03-26 13:08:49] 
+[任务 28] 开始 | seed=1 | weathered wood frame, two posts and beam...
+[2026-03-26 13:08:49] 配置文件：editing_config_batch/314d5728e6ac496abdf1fe7268ca9ae0/314d5728e6ac496abdf1fe7268ca9ae0_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch027_seed1.yaml
+[2026-03-26 13:12:21] ✓ [任务 25] 完成 | seed=1 | (303.5s)
+[2026-03-26 13:12:21] 
+[任务 27] 开始 | seed=3 | weathered wood frame, two posts and beam...
+[2026-03-26 13:12:21] 配置文件：editing_config_batch/314d5728e6ac496abdf1fe7268ca9ae0/xiaorong/314d5728e6ac496abdf1fe7268ca9ae0_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch026_seed3.yaml
+[2026-03-26 13:12:23] ✓ [任务 26] 完成 | seed=3 | (305.4s)
+[2026-03-26 13:12:23] 
+[任务 28] 开始 | seed=1 | weathered wood frame, two posts and beam...
+[2026-03-26 13:12:23] 配置文件：editing_config_batch/314d5728e6ac496abdf1fe7268ca9ae0/xiaorong/314d5728e6ac496abdf1fe7268ca9ae0_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch027_seed1.yaml
+[2026-03-26 13:13:00] ✓ [任务 27] 完成 | seed=3 | (296.1s)
+[2026-03-26 13:13:00] 
+[任务 29] 开始 | seed=1 | weathered wood frame, two posts and beam...
+[2026-03-26 13:13:00] 配置文件：editing_config_batch/314d5728e6ac496abdf1fe7268ca9ae0/314d5728e6ac496abdf1fe7268ca9ae0_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch028_seed1.yaml
+[2026-03-26 13:13:39] ✓ [任务 28] 完成 | seed=1 | (290.0s)
+[2026-03-26 13:13:39] 
+[任务 30] 开始 | seed=3 | weathered wood frame, two posts and beam...
+[2026-03-26 13:13:39] 配置文件：editing_config_batch/314d5728e6ac496abdf1fe7268ca9ae0/314d5728e6ac496abdf1fe7268ca9ae0_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch029_seed3.yaml
+[2026-03-26 13:17:18] ✓ [任务 27] 完成 | seed=3 | (297.3s)
+[2026-03-26 13:17:18] 
+[任务 29] 开始 | seed=1 | weathered wood frame, two posts and beam...
+[2026-03-26 13:17:18] 配置文件：editing_config_batch/314d5728e6ac496abdf1fe7268ca9ae0/xiaorong/314d5728e6ac496abdf1fe7268ca9ae0_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch028_seed1.yaml
+[2026-03-26 13:17:32] ✓ [任务 28] 完成 | seed=1 | (308.9s)
+[2026-03-26 13:17:32] 
+[任务 30] 开始 | seed=3 | weathered wood frame, two posts and beam...
+[2026-03-26 13:17:32] 配置文件：editing_config_batch/314d5728e6ac496abdf1fe7268ca9ae0/xiaorong/314d5728e6ac496abdf1fe7268ca9ae0_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch029_seed3.yaml
+[2026-03-26 13:17:59] ✓ [任务 29] 完成 | seed=1 | (299.0s)
+[2026-03-26 13:17:59] 
+[任务 31] 开始 | seed=3 | weathered wood frame, two posts and beam...
+[2026-03-26 13:17:59] 配置文件：editing_config_batch/314d5728e6ac496abdf1fe7268ca9ae0/314d5728e6ac496abdf1fe7268ca9ae0_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch030_seed3.yaml
+[2026-03-26 13:18:38] ✓ [任务 30] 完成 | seed=3 | (298.7s)
+[2026-03-26 13:18:38] 
+[任务 32] 开始 | seed=1 | weathered wood frame, two posts and beam...
+[2026-03-26 13:18:38] 配置文件：editing_config_batch/314d5728e6ac496abdf1fe7268ca9ae0/314d5728e6ac496abdf1fe7268ca9ae0_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch031_seed1.yaml
+[2026-03-26 13:22:22] ✓ [任务 29] 完成 | seed=1 | (304.4s)
+[2026-03-26 13:22:22] 
+[任务 31] 开始 | seed=1 | weathered wood frame, two posts and beam...
+[2026-03-26 13:22:22] 配置文件：editing_config_batch/314d5728e6ac496abdf1fe7268ca9ae0/xiaorong/314d5728e6ac496abdf1fe7268ca9ae0_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch030_seed1.yaml
+[2026-03-26 13:22:30] ✓ [任务 30] 完成 | seed=3 | (297.6s)
+[2026-03-26 13:22:30] 
+[任务 32] 开始 | seed=3 | weathered wood frame, two posts and beam...
+[2026-03-26 13:22:30] 配置文件：editing_config_batch/314d5728e6ac496abdf1fe7268ca9ae0/xiaorong/314d5728e6ac496abdf1fe7268ca9ae0_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch031_seed3.yaml
+[2026-03-26 13:23:02] ✓ [任务 31] 完成 | seed=3 | (302.9s)
+[2026-03-26 13:23:02] 
+[任务 33] 开始 | seed=3 | weathered wood frame, two posts and beam...
+[2026-03-26 13:23:02] 配置文件：editing_config_batch/314d5728e6ac496abdf1fe7268ca9ae0/314d5728e6ac496abdf1fe7268ca9ae0_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch032_seed3.yaml
+[2026-03-26 13:23:35] ✓ [任务 32] 完成 | seed=1 | (296.6s)
+[2026-03-26 13:23:35] 
+[任务 34] 开始 | seed=1 | weathered wood frame, two posts and beam...
+[2026-03-26 13:23:35] 配置文件：editing_config_batch/314d5728e6ac496abdf1fe7268ca9ae0/314d5728e6ac496abdf1fe7268ca9ae0_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch033_seed1.yaml
+[2026-03-26 13:27:22] ✓ [任务 31] 完成 | seed=1 | (299.6s)
+[2026-03-26 13:27:22] 
+[任务 33] 开始 | seed=3 | weathered wood frame, two posts and beam...
+[2026-03-26 13:27:22] 配置文件：editing_config_batch/314d5728e6ac496abdf1fe7268ca9ae0/xiaorong/314d5728e6ac496abdf1fe7268ca9ae0_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch032_seed3.yaml
+[2026-03-26 13:27:34] ✓ [任务 32] 完成 | seed=3 | (304.6s)
+[2026-03-26 13:27:34] 
+[任务 34] 开始 | seed=1 | weathered wood frame, two posts and beam...
+[2026-03-26 13:27:34] 配置文件：editing_config_batch/314d5728e6ac496abdf1fe7268ca9ae0/xiaorong/314d5728e6ac496abdf1fe7268ca9ae0_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch033_seed1.yaml
+[2026-03-26 13:28:01] ✓ [任务 33] 完成 | seed=3 | (298.9s)
+[2026-03-26 13:28:01] 
+[任务 35] 开始 | seed=3 | weathered wood frame, two posts and beam...
+[2026-03-26 13:28:01] 配置文件：editing_config_batch/314d5728e6ac496abdf1fe7268ca9ae0/314d5728e6ac496abdf1fe7268ca9ae0_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch034_seed3.yaml
+[2026-03-26 13:28:32] ✓ [任务 34] 完成 | seed=1 | (297.7s)
+[2026-03-26 13:28:32] 
+[任务 36] 开始 | seed=1 | weathered wood frame, two posts and beam...
+[2026-03-26 13:28:32] 配置文件：editing_config_batch/314d5728e6ac496abdf1fe7268ca9ae0/314d5728e6ac496abdf1fe7268ca9ae0_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch035_seed1.yaml
+[2026-03-26 13:32:19] ✓ [任务 33] 完成 | seed=3 | (297.5s)
+[2026-03-26 13:32:19] 
+[任务 35] 开始 | seed=3 | weathered wood frame, two posts and beam...
+[2026-03-26 13:32:19] 配置文件：editing_config_batch/314d5728e6ac496abdf1fe7268ca9ae0/xiaorong/314d5728e6ac496abdf1fe7268ca9ae0_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch034_seed3.yaml
+[2026-03-26 13:32:34] ✓ [任务 34] 完成 | seed=1 | (299.6s)
+[2026-03-26 13:32:34] 
+[任务 36] 开始 | seed=1 | weathered wood frame, two posts and beam...
+[2026-03-26 13:32:34] 配置文件：editing_config_batch/314d5728e6ac496abdf1fe7268ca9ae0/xiaorong/314d5728e6ac496abdf1fe7268ca9ae0_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch035_seed1.yaml
+[2026-03-26 13:33:01] ✓ [任务 35] 完成 | seed=3 | (300.3s)
+[2026-03-26 13:33:01] 
+[任务 37] 开始 | seed=1 | weathered wood frame, two posts and beam...
+[2026-03-26 13:33:01] 配置文件：editing_config_batch/314d5728e6ac496abdf1fe7268ca9ae0/314d5728e6ac496abdf1fe7268ca9ae0_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch036_seed1.yaml
+[2026-03-26 13:33:32] ✓ [任务 36] 完成 | seed=1 | (300.1s)
+[2026-03-26 13:33:32] 
+[任务 38] 开始 | seed=3 | weathered wood frame, two posts and beam...
+[2026-03-26 13:33:32] 配置文件：editing_config_batch/314d5728e6ac496abdf1fe7268ca9ae0/314d5728e6ac496abdf1fe7268ca9ae0_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch037_seed3.yaml
+[2026-03-26 13:37:19] ✓ [任务 35] 完成 | seed=3 | (299.9s)
+[2026-03-26 13:37:19] 
+[任务 37] 开始 | seed=1 | weathered wood frame, two posts and beam...
+[2026-03-26 13:37:19] 配置文件：editing_config_batch/314d5728e6ac496abdf1fe7268ca9ae0/xiaorong/314d5728e6ac496abdf1fe7268ca9ae0_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch036_seed1.yaml
+[2026-03-26 13:37:34] ✓ [任务 36] 完成 | seed=1 | (299.8s)
+[2026-03-26 13:37:34] 
+[任务 38] 开始 | seed=3 | weathered wood frame, two posts and beam...
+[2026-03-26 13:37:34] 配置文件：editing_config_batch/314d5728e6ac496abdf1fe7268ca9ae0/xiaorong/314d5728e6ac496abdf1fe7268ca9ae0_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch037_seed3.yaml
+[2026-03-26 13:38:01] ✓ [任务 37] 完成 | seed=1 | (299.5s)
+[2026-03-26 13:38:01] 
+[任务 39] 开始 | seed=3 | weathered wood frame, two posts and beam...
+[2026-03-26 13:38:01] 配置文件：editing_config_batch/314d5728e6ac496abdf1fe7268ca9ae0/314d5728e6ac496abdf1fe7268ca9ae0_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch038_seed3.yaml
+[2026-03-26 13:38:32] ✓ [任务 38] 完成 | seed=3 | (299.9s)
+[2026-03-26 13:38:32] 
+[任务 40] 开始 | seed=1 | weathered wood frame, two posts and beam...
+[2026-03-26 13:38:32] 配置文件：editing_config_batch/314d5728e6ac496abdf1fe7268ca9ae0/314d5728e6ac496abdf1fe7268ca9ae0_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch039_seed1.yaml
+[2026-03-26 13:42:18] ✓ [任务 37] 完成 | seed=1 | (298.6s)
+[2026-03-26 13:42:18] 
+[任务 39] 开始 | seed=3 | weathered wood frame, two posts and beam...
+[2026-03-26 13:42:18] 配置文件：editing_config_batch/314d5728e6ac496abdf1fe7268ca9ae0/xiaorong/314d5728e6ac496abdf1fe7268ca9ae0_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch038_seed3.yaml
+[2026-03-26 13:42:33] ✓ [任务 38] 完成 | seed=3 | (298.7s)
+[2026-03-26 13:42:33] 
+[任务 40] 开始 | seed=1 | weathered wood frame, two posts and beam...
+[2026-03-26 13:42:33] 配置文件：editing_config_batch/314d5728e6ac496abdf1fe7268ca9ae0/xiaorong/314d5728e6ac496abdf1fe7268ca9ae0_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch039_seed1.yaml
+[2026-03-26 13:43:00] ✓ [任务 39] 完成 | seed=3 | (299.6s)
+[2026-03-26 13:43:00] 
+[任务 41] 开始 | seed=3 | weathered wood frame, two posts and beam...
+[2026-03-26 13:43:00] 配置文件：editing_config_batch/314d5728e6ac496abdf1fe7268ca9ae0/314d5728e6ac496abdf1fe7268ca9ae0_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch040_seed3.yaml
+[2026-03-26 13:43:34] ✓ [任务 40] 完成 | seed=1 | (301.5s)
+[2026-03-26 13:43:34] 
+[任务 42] 开始 | seed=1 | weathered wood frame, two posts and beam...
+[2026-03-26 13:43:34] 配置文件：editing_config_batch/314d5728e6ac496abdf1fe7268ca9ae0/314d5728e6ac496abdf1fe7268ca9ae0_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch041_seed1.yaml
+[2026-03-26 13:47:21] ✓ [任务 39] 完成 | seed=3 | (303.3s)
+[2026-03-26 13:47:21] 
+[任务 41] 开始 | seed=3 | weathered wood frame, two posts and beam...
+[2026-03-26 13:47:21] 配置文件：editing_config_batch/314d5728e6ac496abdf1fe7268ca9ae0/xiaorong/314d5728e6ac496abdf1fe7268ca9ae0_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch040_seed3.yaml
+[2026-03-26 13:47:36] ✓ [任务 40] 完成 | seed=1 | (303.0s)
+[2026-03-26 13:47:36] 
+[任务 42] 开始 | seed=1 | weathered wood frame, two posts and beam...
+[2026-03-26 13:47:36] 配置文件：editing_config_batch/314d5728e6ac496abdf1fe7268ca9ae0/xiaorong/314d5728e6ac496abdf1fe7268ca9ae0_seed1_prompt_1_base_w3_yizhi0507_adain_first_batch041_seed1.yaml
+[2026-03-26 13:47:55] ✓ [任务 41] 完成 | seed=3 | (295.1s)
+[2026-03-26 13:48:29] ✓ [任务 42] 完成 | seed=1 | (294.6s)
+[2026-03-26 13:48:29] 
+======================================================================
+[2026-03-26 13:48:29] 批量完成！成功：42/42
+[2026-03-26 13:48:29] 总计：42 任务 | 成功率：100.0%
+[2026-03-26 13:48:29] ======================================================================
+[2026-03-26 13:50:28] ✓ [任务 41] 完成 | seed=3 | (187.2s)
+[2026-03-26 13:50:34] ✓ [任务 42] 完成 | seed=1 | (178.4s)
+[2026-03-26 13:50:34] 
+======================================================================
+[2026-03-26 13:50:34] 批量完成！成功：42/42
+[2026-03-26 13:50:34] 总计：42 任务 | 成功率：100.0%
+[2026-03-26 13:50:34] ======================================================================

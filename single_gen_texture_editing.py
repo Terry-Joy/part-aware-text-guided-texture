@@ -273,7 +273,8 @@ def main():
         adain_time=opt.get('adain_time', 0.3),
         
         painted_views=opt.get('painted_views', None),
-        painted_mask=opt.get('painted_mask', None)
+        painted_mask=opt.get('painted_mask', None),
+        do_highres_fix=opt.get('do_highres_fix', None)
         # painted_mask: torch.FloatTensor = None,
     )
     

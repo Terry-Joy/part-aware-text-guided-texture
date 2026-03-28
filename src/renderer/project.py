@@ -352,13 +352,13 @@ class UVProjection():
             loss.backward()
             optimizer.step()
 
-            # if fill:
-            #     print('fill')  
-            #     zero_map = zero_map.detach() / (self.gradient_maps[i] + 1E-8)
-            #     zero_map = voronoi_solve(zero_map, self.gradient_maps[i][...,0])
-            # else:
+            if fill:
+                # print('fill')  
+                zero_map = zero_map.detach() / (self.gradient_maps[i] + 1E-8)
+                zero_map = voronoi_solve(zero_map, self.gradient_maps[i][...,0])
+            else:
                 # uvp_rgb最后是false
-            zero_map = zero_map.detach() / (self.gradient_maps[i]+1E-8)
+                zero_map = zero_map.detach() / (self.gradient_maps[i]+1E-8)
             cos_maps.append(zero_map)
         self.cos_maps = cos_maps
 

@@ -7,7 +7,7 @@ from diffusers import StableDiffusionControlNetPipeline, ControlNetModel
 from diffusers import DDPMScheduler
 # pipeline2 测试
 # from src.buquan_pipeline import StableSyncMVDPipeline
-from src.pipeline2 import StableSyncMVDPipeline
+from src.houqi_pipeline import StableSyncMVDPipeline
 import yaml
 import argparse
 import shutil
